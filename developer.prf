@@ -1,5 +1,5 @@
 # This profile is useful when creating your own tests, or debugging tests
-# lynis audit system --profile developer.prf
+# leenus audit system --profile developer.prf
 
 debug=yes
 developer-mode=yes
