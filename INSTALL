@@ -1,7 +1,7 @@
 
 ================================================================================
 
-  Lynis - Installation instructions
+  Leenus - Installation instructions
 
 ================================================================================
 
@@ -18,11 +18,11 @@
 [+] Run directly
 -------------------------------
 
-  Lynis can be executed directly (unpack tarball, enter lynis directory).
+  Leenus can be executed directly (unpack tarball, enter leenus directory).
 
-  # sh lynis
+  # sh leenus
   or
-  # ./lynis
+  # ./leenus
 
   Root privileges are preferred for full audits.
 
@@ -31,7 +31,7 @@
 [+] Installation
 -------------------------------
 
-  If you want to install Lynis, see the README file (section: Installation) for
+  If you want to install Leenus, see the README file (section: Installation) for
   more tips about how to install or create a custom package.
 
   Packages are available via https://packages.cisofy.com
@@ -41,11 +41,11 @@
 [+] Documentation
 -------------------------------
 
-  Documentation about Lynis can be found in the man page (man lynis, or
-  lynis --man-page), README file and website. Also the FAQ file covers some
+  Documentation about Leenus can be found in the man page (man leenus, or
+  leenus --man-page), README file and website. Also the FAQ file covers some
   often asked questions.
 
 
 
 ================================================================================
- Lynis - Copyright 2007-2021, Michael Boelen, CISOfy - https://cisofy.com
+ Leenus - Copyright 2007-2021, Michael Boelen, CISOfy - https://cisofy.com
