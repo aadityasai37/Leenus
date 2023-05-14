@@ -1,13 +1,13 @@
 #################################################################################
 #
 #
-# Lynis - Default scan profile
+# Leenus - Default scan profile
 #
 #
 #################################################################################
 #
 #
-# This profile provides Lynis with most of its initial values to perform a
+# This profile provides Leenus with most of its initial values to perform a
 # system audit.
 #
 #
@@ -17,10 +17,10 @@
 # Do NOT make changes to this file. Instead, copy only your changes into
 # the file custom.prf and put it in the same directory as default.prf
 #
-# To discover where your profiles are located: lynis show profiles
+# To discover where your profiles are located: leenus show profiles
 #
 #
-# Lynis performs a strict check on profiles to avoid the inclusion of
+# Leenus performs a strict check on profiles to avoid the inclusion of
 # possibly harmful injections. See include/profiles for details.
 #
 #
@@ -45,7 +45,7 @@ compressed-uploads=yes
 # Show non-zero exit code when warnings are found
 error-on-warnings=no
 
-# Use Lynis in your own language (by default auto-detected)
+# Use Leenus in your own language (by default auto-detected)
 language=
 
 # Log tests from another guest operating system (default: yes)
@@ -89,7 +89,7 @@ skip-plugins=no
 #skip-test=SSH-7408:loglevel
 #skip-test=SSH-7408:permitrootlogin
 
-# Skip Lynis upgrade availability test (default: no)
+# Skip Leenus upgrade availability test (default: no)
 #skip-upgrade-test=yes
 
 # Locations where to search for SSL certificates (separate paths with a colon)
@@ -114,11 +114,11 @@ verbose=no
 # - Nothing happens if plugin isn't available
 # - There is no order in execution of plugins
 # - See documentation about how to use plugins and phases
-# - Some are for Lynis Enterprise users only
+# - Some are for Leenus Enterprise users only
 #
 #################################################################################
 
-# Lynis plugins to enable
+# Leenus plugins to enable
 plugin=authentication
 plugin=compliance
 plugin=configuration
@@ -379,7 +379,7 @@ permdir=/etc/cron.monthly:rwx------:root:root:WARN:
 
 #################################################################################
 #
-# Lynis Enterprise options
+# Leenus Enterprise options
 # ------------------------
 #
 #################################################################################
@@ -394,7 +394,7 @@ permdir=/etc/cron.monthly:rwx------:root:root:WARN:
 #hostid=40-char-hash
 #hostid2=64-char-hash
 
-# Lynis Enterprise license key
+# Leenus Enterprise license key
 license-key=
 
 # Proxy settings
