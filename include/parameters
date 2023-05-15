@@ -1,8 +1,8 @@
 #!/bin/sh
-
+#aditya
 #################################################################################
 #
-#   Lynis
+#   Leenus
 # ------------------
 #
 # Copyright 2007-2013, Michael Boelen
@@ -10,9 +10,9 @@
 #
 # Website  : https://cisofy.com
 # Blog     : http://linux-audit.com
-# GitHub   : https://github.com/CISOfy/lynis
+# GitHub   : https://github.com/CISOfy/leenus
 #
-# Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+# Leenus comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
 # welcome to redistribute it under the terms of the GNU General Public License.
 # See LICENSE file for usage of this software.
 #
@@ -74,7 +74,7 @@
                                         shift; shift; shift  # shift out first three arguments
                                         EXTRA_PARAMS=""
                                         if [ ! "$1" = "" ]; then EXTRA_PARAMS=" $@"; fi
-                                        REMOTE_COMMAND="./lynis audit system"
+                                        REMOTE_COMMAND="./leenus audit system"
                                         echo ""
                                         echo "  How to perform a remote scan:"
                                         echo "  ============================="
@@ -103,8 +103,8 @@
                             echo "${RED}Error: ${WHITE}Need a target to audit${NORMAL}"
                             echo " "
                             echo "Examples:"
-                            echo "lynis audit dockerfile"
-                            echo "lynis audit system"
+                            echo "leenus audit dockerfile"
+                            echo "leenus audit system"
                             ExitFatal
                         ;;
                     esac
@@ -112,13 +112,13 @@
                     echo "${RED}Error: ${WHITE}Need a target to audit${NORMAL}"
                     echo " "
                     echo "Examples:"
-                    echo "lynis audit dockerfile"
-                    echo "lynis audit system"
+                    echo "leenus audit dockerfile"
+                    echo "leenus audit system"
                     ExitFatal
                 fi
             ;;
 
-            # Configure Lynis
+            # Configure Leenus
             configure)
                 CHECK_BINARIES=0
                 RUN_HELPERS=1
@@ -150,7 +150,7 @@
                 break
             ;;
 
-            # Show Lynis details
+            # Show Leenus details
             show)
                 CHECK_BINARIES=0
                 HELPER="show"
@@ -184,8 +184,8 @@
                     echo "${RED}Error: ${WHITE}Need a target for update${NORMAL}"
                     echo " "
                     echo "Examples:"
-                    echo "lynis update check"
-                    echo "lynis update info"
+                    echo "leenus update check"
+                    echo "leenus update info"
                     ExitFatal
                 fi
             ;;
@@ -295,7 +295,7 @@
                     shift
                     SEARCH_PROFILES="$1"
                 else
-                    echo "Specify the profile (lynis audit system --profile /home/michael/myprofile.prf)"
+                    echo "Specify the profile (leenus audit system --profile /home/michael/myprofile.prf)"
                     exit 1
                 fi
             ;;
@@ -315,7 +315,7 @@
                         ExitCustom 66
                     fi
                 else
-                    echo "Specify the plugin directory (lynis audit system --plugindir /home/michael/plugins)"
+                    echo "Specify the plugin directory (leenus audit system --plugindir /home/michael/plugins)"
                     exit 1
                 fi
             ;;
@@ -382,7 +382,7 @@
                 TEST_GROUP_TO_CHECK=$1
             ;;
 
-            # Lynis Enterprise: upload data to central node
+            # Leenus Enterprise: upload data to central node
             --upload)
                 UPLOAD_DATA=1
             ;;
@@ -403,12 +403,12 @@
 
             # View man page
             --view-manpage | --man-page | --manpage | --man)
-                if [ -f lynis.8 ]; then
-                    nroff -man lynis.8
+                if [ -f leenus.8 ]; then
+                    nroff -man leenus.8
                     exit 0
                 else
-                    echo "Error: man page file not found (lynis.8)"
-                    echo "If you are running an installed version of Lynis, use 'man lynis'"
+                    echo "Error: man page file not found (leenus.8)"
+                    echo "If you are running an installed version of Leenus, use 'man leenus'"
                     exit 1
                 fi
             ;;
@@ -435,7 +435,7 @@
                         exit 1
                     fi
                 else
-                    echo "Specify threshold as number of seconds above which should Lynis warn about long test."
+                    echo "Specify threshold as number of seconds above which should Leenus warn about long test."
                     exit 1
                 fi
             ;;
@@ -450,28 +450,28 @@
             # Perform tests (deprecated, use audit system)
             --check-all | --checkall | -c)
                 echo "This option (-c) is deprecated."
-                echo "Use: lynis audit system [options]"
+                echo "Use: leenus audit system [options]"
                 ExitFatal
             ;;
 
             # View program/database information
             --check-update | --check-updates | --info)
                 echo "This option (--info) is deprecated"
-                echo "Use: lynis update info"
+                echo "Use: leenus update info"
                 ExitFatal
             ;;
 
             # Display all available options with short alias
             --dump-options | --dumpoptions)
                 echo "This option (--dump-options) is deprecated"
-                echo "Use: lynis show options"
+                echo "Use: leenus show options"
                 ExitFatal
             ;;
 
-            # License key for Lynis Enterprise
+            # License key for Leenus Enterprise
             --license-key)
                 echo "This option is deprecated"
-                echo "Define a license key in /etc/lynis/custom.prf"
+                echo "Define a license key in /etc/leenus/custom.prf"
                 ExitFatal
             ;;
 
@@ -499,4 +499,4 @@
     fi
 
 #================================================================================
-# Lynis - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
+# Leenus - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
