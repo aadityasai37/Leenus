@@ -1,8 +1,8 @@
 #!/bin/sh
-
+#aditya
 #################################################################################
 #
-#   Lynis
+#   Leenus
 # ------------------
 #
 # Copyright 2007-2013, Michael Boelen
@@ -10,9 +10,9 @@
 #
 # Website  : https://cisofy.com
 # Blog     : http://linux-audit.com
-# GitHub   : https://github.com/CISOfy/lynis
+# GitHub   : https://github.com/CISOfy/leenus
 #
-# Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+# Leenus comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
 # welcome to redistribute it under the terms of the GNU General Public License.
 # See LICENSE file for usage of this software.
 #
@@ -24,25 +24,25 @@
 #
 # Options:
 # ---------
-# 1) lynis update info     - Show version information (external)
-# 2) lynis update release  - Check and install new release (internal)
+# 1) leenus update info     - Show version information (external)
+# 2) leenus update release  - Check and install new release (internal)
 #
 # How to use:
 # ------------
 # Run option 1 to know about current and latest release information.
-# Run option 2 to query internal server for possible upgrade of Lynis.
+# Run option 2 to query internal server for possible upgrade of Leenus.
 #
 # Steps for updating to new release:
-# 1) Run Lynis with: lynis update release
-# 2) Lynis will use this helper and check the profile
-# 3) The configured web server will be queried (lynis-latest-version)
+# 1) Run Leenus with: leenus update release
+# 2) Leenus will use this helper and check the profile
+# 3) The configured web server will be queried (leenus-latest-version)
 # 4) The contents of this file will be compared with a local file
 # 5) If there is a difference, download package
 # 6) Check paths and extract files
 # 7) Quit program
 #
 # Suggested documentation if you want to use this functionality:
-# https://cisofy.com/documentation/lynis/upgrading/
+# https://cisofy.com/documentation/leenus/upgrading/
 #
 ######################################################################
 
@@ -54,32 +54,32 @@
     if [ "${SCP_BINARY}" = "" ]; then echo "Could not find scp binary"; ExitFatal; fi
     if [ "${SSH_BINARY}" = "" ]; then echo "Could not find ssh binary"; ExitFatal; fi
 
-    LYNIS_TARBALL="lynis-remote.tar.gz"
+    LEENUS_TARBALL="leenus-remote.tar.gz"
     echo ""
     echo  "  ${BLUE}* ${WHITE}Step 1${NORMAL}: ${CYAN}Create tarball${NORMAL}"
-    printf "%s\n\n" "    mkdir -p ./files && cd .. && tar czf ./lynis/files/${LYNIS_TARBALL} --exclude=files/${LYNIS_TARBALL} ./lynis && cd lynis"
+    printf "%s\n\n" "    mkdir -p ./files && cd .. && tar czf ./leenus/files/${LEENUS_TARBALL} --exclude=files/${LEENUS_TARBALL} ./leenus && cd leenus"
 
     echo "  ${BLUE}* ${WHITE}Step 2${NORMAL}: ${CYAN}Copy tarball to target ${REMOTE_TARGET}${NORMAL}"
-    LYNIS_TARBALL="./files/lynis-remote.tar.gz"
-    printf "%s\n\n" "    scp -q ${LYNIS_TARBALL} ${REMOTE_TARGET}:~/tmp-lynis-remote.tgz"
+    LEENUS_TARBALL="./files/leenus-remote.tar.gz"
+    printf "%s\n\n" "    scp -q ${LEENUS_TARBALL} ${REMOTE_TARGET}:~/tmp-leenus-remote.tgz"
     #if [ $? -gt 0 ]; then echo "Could not copy tarball to target"; ExitFatal; fi
 
     echo "  ${BLUE}* ${WHITE}Step 3${NORMAL}: ${CYAN}Execute audit command${NORMAL}"
 
-    printf "%s\n\n" "    ssh ${REMOTE_TARGET} \"mkdir -p ~/tmp-lynis && cd ~/tmp-lynis && tar xzf ../tmp-lynis-remote.tgz && rm ../tmp-lynis-remote.tgz && cd lynis && ${REMOTE_COMMAND}\""
+    printf "%s\n\n" "    ssh ${REMOTE_TARGET} \"mkdir -p ~/tmp-leenus && cd ~/tmp-leenus && tar xzf ../tmp-leenus-remote.tgz && rm ../tmp-leenus-remote.tgz && cd leenus && ${REMOTE_COMMAND}\""
     #if [ $? -gt 1 ]; then echo "Could not perform remote audit"; ExitFatal; fi
 
     echo "  ${BLUE}* ${WHITE}Step 4${NORMAL}: ${CYAN}Clean up directory${NORMAL}"
-    printf "%s\n\n" "    ssh ${REMOTE_TARGET} \"rm -rf ~/tmp-lynis\""
+    printf "%s\n\n" "    ssh ${REMOTE_TARGET} \"rm -rf ~/tmp-leenus\""
 
     echo "  ${BLUE}* ${WHITE}Step 5${NORMAL}: ${CYAN}Retrieve log and report${NORMAL}"
-    printf "%s\n" "    scp -q ${REMOTE_TARGET}:/tmp/lynis.log ./files/${REMOTE_TARGET}-lynis.log"
-    printf "%s\n\n" "    scp -q ${REMOTE_TARGET}:/tmp/lynis-report.dat ./files/${REMOTE_TARGET}-lynis-report.dat"
+    printf "%s\n" "    scp -q ${REMOTE_TARGET}:/tmp/leenus.log ./files/${REMOTE_TARGET}-leenus.log"
+    printf "%s\n\n" "    scp -q ${REMOTE_TARGET}:/tmp/leenus-report.dat ./files/${REMOTE_TARGET}-leenus-report.dat"
 
     echo "  ${BLUE}* ${WHITE}Step 6${NORMAL}: ${CYAN}Clean up tmp files (when using non-privileged account)${NORMAL}"
-    printf "%s\n\n" "    ssh ${REMOTE_TARGET} \"rm /tmp/lynis.log /tmp/lynis-report.dat\""
+    printf "%s\n\n" "    ssh ${REMOTE_TARGET} \"rm /tmp/leenus.log /tmp/leenus-report.dat\""
 
-    # No more Lynis output
+    # No more Leenus output
     QUIET=1
 
 # The End
