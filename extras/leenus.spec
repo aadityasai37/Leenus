@@ -1,6 +1,6 @@
 #################################################################################
-#
-# Lynis spec file
+#aditya
+# Leenus spec file
 # -----------------
 #
 # This is a dummy file now. If you like to install the latest version as a
@@ -10,13 +10,13 @@
 # -------------
 #
 # If you like to build your own rpm, use the software development kit, or copy
-# manually the lynis.spec file.
+# manually the leenus.spec file.
 #
-# mkdir -p /home/myuser/lynis
-# cd /home/myuser/lynis
-# git clone https://github.com/CISOfy/lynis
-# git clone https://github.com/CISOfy/lynis-sdk/
-# cd lynis-sdk
-# ./lynis-sdk build rpm
+# mkdir -p /home/myuser/leenus
+# cd /home/myuser/leenus
+# git clone https://github.com/CISOfy/leenus
+# git clone https://github.com/CISOfy/leenus-sdk/
+# cd leenus-sdk
+# ./leenus-sdk build rpm
 #
 #################################################################################
