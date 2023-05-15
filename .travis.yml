@@ -1,14 +1,14 @@
 language: bash
-
+#aditya
 before_script:
     - sh extras/travis-ci/before_script.sh
 
 script:
-    - cd .. && cd ./lynis-sdk && sh lynis-devkit run unit-tests
+    - cd .. && cd ./leenus-sdk && sh leenus-devkit run unit-tests
 
 notifications:
   email:
     recipients:
-      - lynis-dev@cisofy.com
+      - leenus-dev@cisofy.com
     on_success: change
     on_failure: always
