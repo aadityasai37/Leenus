@@ -1,8 +1,8 @@
 #!/bin/sh
-
+#aditya
 #################################################################################
 #
-#   Lynis
+#   Leenus
 # ------------------
 #
 # Copyright 2007-2013, Michael Boelen
@@ -10,9 +10,9 @@
 #
 # Website  : https://cisofy.com
 # Blog     : http://linux-audit.com
-# GitHub   : https://github.com/CISOfy/lynis
+# GitHub   : https://github.com/CISOfy/leenus
 #
-# Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+# Leenus comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
 # welcome to redistribute it under the terms of the GNU General Public License.
 # See LICENSE file for usage of this software.
 #
@@ -58,7 +58,7 @@
 #
 #####################################################################################
 
-    Output "Lynis Enterprise data uploader starting"
+    Output "Leenus Enterprise data uploader starting"
     Output "Settings file: ${SETTINGS_FILE}"
 
     # Check if we can find curl
@@ -119,7 +119,7 @@
                         CURL_OPTIONS="${CURL_OPTIONS} --socks5 ${UPLOAD_PROXY}"
                     ;;
                     *)
-                        echo "Unknown protocol. Please report to lynis-dev@cisofy.com"
+                        echo "Unknown protocol. Please report to leenus-dev@cisofy.com"
                         ExitFatal
                     ;;
                 esac
@@ -148,7 +148,7 @@
                     2)
                         LogText "Result: could not initialize"
                         LogText "Possible cause: most likely your cURL version is too old and does not support the --data-urlencode option."
-                        LogText "Suggestion: copy the data to a different server and use a new cURL version there, or use the Lynis Collector tool."
+                        LogText "Suggestion: copy the data to a different server and use a new cURL version there, or use the Leenus Collector tool."
                         echo "${RED}Error (2)${NORMAL}: could not initialize cURL."
                         ;;
                     5)
@@ -170,7 +170,7 @@
                         LogText "Result: SSL cipher used is not understood or accepted."
                         ;;
                     60)
-                        echo "${RED}Error (60)${NORMAL}: Self-signed certificate used on Lynis Enterprise node${NORMAL}"
+                        echo "${RED}Error (60)${NORMAL}: Self-signed certificate used on Leenus Enterprise node${NORMAL}"
                         echo "If you want to accept a self-signed certificate, configure your profile and set the -k option in the upload-options."
                         echo "Example: ${WHITE}$0 configure settings upload-options=-k${NORMAL}"
                         LogText "Result: found self-signed certificate, however cURL -k option not used."
@@ -214,7 +214,7 @@
             echo "- Connection with license server could not be established (try address in your web browser)"
             echo "- Incorrect server has been configured in profile"
             echo "- License is expired (listed in Configuration screen) or No credits left (listed in Configuration screen)"
-            echo "- Collector version of Lynis version outdated (upgrade to latest version of Lynis and/or Lynis Collector)"
+            echo "- Collector version of Leenus version outdated (upgrade to latest version of Leenus and/or Leenus Collector)"
             echo ""
             echo "If you need support in solving this, please contact support@cisofy.com and include this screen output."
             echo ""
@@ -232,7 +232,7 @@
             Output "Uploading data.."
             LogText "Command used: ${CURLBINARY}${CURL_OPTIONS} -s -S --data-urlencode \"data@${REPORTFILE}\" --data-urlencode \"licensekey@${LICENSE_KEY_FILE}\" --data-urlencode \"hostid=${HOSTID}\" ${UPLOAD_URL}"
             LogText "Tip: try running ${CURLBINARY}${CURL_OPTIONS} --data-urlencode \"data@${REPORTFILE}\" --data-urlencode \"licensekey@${LICENSE_KEY_FILE}\" --data-urlencode \"hostid=${HOSTID}\" ${UPLOAD_URL}"
-            LogText "Tip: to just retry an upload, use: lynis upload-only"
+            LogText "Tip: to just retry an upload, use: leenus upload-only"
             UPLOAD=$(${CURLBINARY}${CURL_OPTIONS} -s -S --data-urlencode "data@${REPORTFILE}" --data-urlencode "licensekey@${LICENSE_KEY_FILE}" --data-urlencode "hostid=${HOSTID}" --data-urlencode "hostid2=${HOSTID2}" ${UPLOAD_URL} 2> /dev/null)
             EXITCODE=$?
             LogText "Exit code: ${EXITCODE}"
@@ -260,7 +260,7 @@
             fi
         else
             echo "${RED}Error${NORMAL}: No hostid and/or hostid2 found. Can not upload report file."
-            echo "Suggested command: lynis generate hostids --save"
+            echo "Suggested command: leenus generate hostids --save"
             echo ""
             echo "Note: do not replicate the values to other systems, as it needs to be unique per system"
 
@@ -274,4 +274,4 @@
 
 #
 #================================================================================
-# Lynis - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
+# Leenus - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
