@@ -4,7 +4,7 @@
 ## Helping out
 
 ### Run the latest version from GitHub
-Run the tool in debug mode (use lynis audit system --profile developer.prf) and see if it shows any error.
+Run the tool in debug mode (use leenus audit system --profile developer.prf) and see if it shows any error.
 
 ### Report bugs
 Create a GitHub issue on the issue tracker.
@@ -21,7 +21,7 @@ See the db/languages directory.
 To ensure all pull requests can be easily checked and merged, here are some tips:
 * Your code should work on other platforms running the bourne shell (/bin/sh), not just BASH.
 * Properly document your code where needed. Besides the 'what', focus on explaining the 'why'.
-* Check the log information (lynis.log) of your new test or changed code, so that it provides helpful details for others.
+* Check the log information (leenus.log) of your new test or changed code, so that it provides helpful details for others.
 
 
 ## Code Guidelines
@@ -41,8 +41,8 @@ Variables should be capitalized, with underscore as word separator (e.g. PROCESS
 
 
 ## Pull Requests
-We welcome any contribution to improve Lynis. Contributions to the Lynis project can
-be submitted as a pull request. The upstream project can be found in our [GitHub repository](https://github.com/CISOfy/lynis).
+We welcome any contribution to improve Leenus. Contributions to the Leenus project can
+be submitted as a pull request. The upstream project can be found in our [GitHub repository](https://github.com/CISOfy/leenus).
 
 By submitting a [Pull Request](https://help.github.com/articles/using-pull-requests/)
 to this repository, you agree that you:
@@ -53,11 +53,11 @@ to this repository, you agree that you:
 2. Allow your contribution to be licensed under the license of the target
    project (GPLv3)
 
-3. Allow your contribution to be freely distributed to the Lynis community
+3. Allow your contribution to be freely distributed to the Leenus community
 
 4. Allow the project the [Unlimited Rights](#Unlimited-Rights) to your contribution
 
-If you have questions regarding development, send us an e-mail at [lynis-dev](mailto:lynis-dev@cisofy.com).
+If you have questions regarding development, send us an e-mail at [leenus-dev](mailto:leenus-dev@cisofy.com).
 
 
 ## Unlimited Rights
