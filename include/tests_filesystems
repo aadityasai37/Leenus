@@ -1,8 +1,8 @@
 #!/bin/sh
-
+#aditya
 #################################################################################
 #
-#   Lynis
+#   Leenus
 # ------------------
 #
 # Copyright 2007-2013, Michael Boelen
@@ -10,9 +10,9 @@
 #
 # Website  : https://cisofy.com
 # Blog     : http://linux-audit.com
-# GitHub   : https://github.com/CISOfy/lynis
+# GitHub   : https://github.com/CISOfy/leenus
 #
-# Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+# Leenus comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
 # welcome to redistribute it under the terms of the GNU General Public License.
 # See LICENSE file for usage of this software.
 #
@@ -460,7 +460,7 @@
     # Description : Check for noatime option
     # More info   : especially useful for profile 'desktop' and 'server-storage'
 
-    # Want to contribute to Lynis? Create this test
+    # Want to contribute to Leenus? Create this test
 
 #
 #################################################################################
@@ -673,14 +673,14 @@
     # Test        : FILE-6378 TODO
     # Description : Check for nodirtime option
 
-    # Want to contribute to Lynis? Create this test
+    # Want to contribute to Leenus? Create this test
 #
 #################################################################################
 #
     # Test        : FILE-6380 TODO
     # Description : Check for relatime
 
-    # Want to contribute to Lynis? Create this test
+    # Want to contribute to Leenus? Create this test
 #
 #################################################################################
 #
@@ -688,7 +688,7 @@
     # Description : Check writeback/journalling mode (ext3)
     # More info   : data=writeback | data=ordered | data=journal
 
-    # Want to contribute to Lynis? Create this test
+    # Want to contribute to Leenus? Create this test
 
 #
 #################################################################################
@@ -729,7 +729,7 @@
     # Test        : FILE-6398 TODO
     # Description : Check if JBD (Journal Block Device) driver is loaded
 
-    # Want to contribute to Lynis? Create this test
+    # Want to contribute to Leenus? Create this test
 
 #
 #################################################################################
@@ -769,7 +769,7 @@
     # Test        : FILE-6420 TODO
     # Description : Check automount process
 
-    # Want to contribute to Lynis? Create this test
+    # Want to contribute to Leenus? Create this test
 
 #
 #################################################################################
@@ -778,7 +778,7 @@
     # Description : Check automount maps (files or for example LDAP based)
     # Notes       : Warn when automounter is running
 
-    # Want to contribute to Lynis? Create this test
+    # Want to contribute to Leenus? Create this test
 
 #
 #################################################################################
@@ -786,7 +786,7 @@
     # Test        : FILE-6424 TODO
     # Description : Check automount map files
 
-    # Want to contribute to Lynis? Create this test
+    # Want to contribute to Leenus? Create this test
 
 #
 #################################################################################
@@ -795,7 +795,7 @@
     # Description : Check mounted files systems via automounter
     # Notes       : Warn when no systems are mounted?
 
-    # Want to contribute to Lynis? Create this test
+    # Want to contribute to Leenus? Create this test
 
 #
 #################################################################################
@@ -862,4 +862,4 @@ WaitForKeyPress
 
 #
 #================================================================================
-# Lynis - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
+# Leenus - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
