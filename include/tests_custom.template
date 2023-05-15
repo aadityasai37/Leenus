@@ -1,5 +1,5 @@
 #!/bin/sh
-
+#aditya
 #################################################################################
 #
 # This is the custom tests file and serves as a template.
@@ -11,7 +11,7 @@
 # How to use:
 #
 # Copy this file to the 'include' directory and name it tests_custom
-# Find your includedir with: lynis show includedir
+# Find your includedir with: leenus show includedir
 #
 #################################################################################
 #
@@ -21,7 +21,7 @@
 #
 # Use big steps (e.g. 10) in numbering, so you can easily put in tests later.
 #
-# Help the community and share your checks on https://github.com/CISOfy/lynis/
+# Help the community and share your checks on https://github.com/CISOfy/leenus/
 #
 #################################################################################
 #
@@ -80,7 +80,7 @@
         fi
 
         # If a single value is stored in a variable, using 'case' is very effective.
-        # Let's check for a predefined variable OS, which is defined by Lynis
+        # Let's check for a predefined variable OS, which is defined by Leenus
         case ${OS} in
             # Only match one value
             "Linux")
@@ -146,4 +146,4 @@ WaitForKeyPress
 
 #
 #================================================================================
-# Lynis - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
+# Leenus - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
