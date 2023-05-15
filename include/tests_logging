@@ -1,8 +1,8 @@
 #!/bin/sh
-
+#aditya
 #################################################################################
 #
-#   Lynis
+#   Leenus
 # ------------------
 #
 # Copyright 2007-2013, Michael Boelen
@@ -10,9 +10,9 @@
 #
 # Website  : https://cisofy.com
 # Blog     : http://linux-audit.com
-# GitHub   : https://github.com/CISOfy/lynis
+# GitHub   : https://github.com/CISOfy/leenus
 #
-# Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+# Leenus comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
 # welcome to redistribute it under the terms of the GNU General Public License.
 # See LICENSE file for usage of this software.
 #
@@ -568,7 +568,7 @@
         # grsecurity causes Fail2Ban to hold onto deleted in-use files in /var/tmp
         if [ ${GRSEC_FOUND} -eq 1 ]; then LSOF_GREP="${LSOF_GREP}|fail2ban"; fi
         if [ ${OS_REDHAT_OR_CLONE} -eq 1 ]; then
-            # If lynis is run from /etc/cron.daily some deleted in-use files are kept in /tmp
+            # If leenus is run from /etc/cron.daily some deleted in-use files are kept in /tmp
             LSOF_GREP="${LSOF_GREP}|anacron|awk|run-parts"
         fi
 
@@ -615,4 +615,4 @@ WaitForKeyPress
 
 #
 #================================================================================
-# Lynis - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
+# Leenus - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
