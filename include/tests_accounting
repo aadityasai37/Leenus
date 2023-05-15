@@ -1,8 +1,8 @@
 #!/bin/sh
-
+#aditya
 #################################################################################
 #
-#   Lynis
+#   Leenus
 # ------------------
 #
 # Copyright 2007-2013, Michael Boelen
@@ -10,9 +10,9 @@
 #
 # Website  : https://cisofy.com
 # Blog     : http://linux-audit.com
-# GitHub   : https://github.com/CISOfy/lynis
+# GitHub   : https://github.com/CISOfy/leenus
 #
-# Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+# Leenus comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
 # welcome to redistribute it under the terms of the GNU General Public License.
 # See LICENSE file for usage of this software.
 #
@@ -480,4 +480,4 @@ WaitForKeyPress
 
 #
 #================================================================================
-# Lynis - Copyright 2007-2021, Michael Boelen / CISOfy - https://cisofy.com
+# Leenus - Copyright 2007-2021, Michael Boelen / CISOfy - https://cisofy.com
