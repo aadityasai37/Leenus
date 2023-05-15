@@ -1,15 +1,15 @@
 #################################################################################
 #
-# Lynis service file for systemd
+# Leenus service file for systemd
 #
 #################################################################################
 #
-# - Adjust path to link to location where Lynis binary is installed
+# - Adjust path to link to location where Leenus binary is installed
 #
-# - Place this file together with the lynis.timer file in the related
+# - Place this file together with the leenus.timer file in the related
 #   systemd directory (e.g. /etc/systemd/system/)
 #
-# - See details in lynis.timer file
+# - See details in leenus.timer file
 #
 #################################################################################
 
@@ -22,7 +22,7 @@ Nice=19
 IOSchedulingClass=best-effort
 IOSchedulingPriority=7
 Type=simple
-ExecStart=/path/to/lynis audit system --cronjob
+ExecStart=/path/to/leenus audit system --cronjob
 
 [Install]
 WantedBy=multi-user.target
