@@ -1,8 +1,8 @@
 #!/bin/sh
-
+#aditya
 #################################################################################
 #
-#   Lynis
+#   Leenus
 # ------------------
 #
 # Copyright 2007-2013, Michael Boelen
@@ -10,9 +10,9 @@
 #
 # Website  : https://cisofy.com
 # Blog     : http://linux-audit.com
-# GitHub   : https://github.com/CISOfy/lynis
+# GitHub   : https://github.com/CISOfy/leenus
 #
-# Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+# Leenus comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
 # welcome to redistribute it under the terms of the GNU General Public License.
 # See LICENSE file for usage of this software.
 #
@@ -112,7 +112,7 @@
         # Show test results overview
 
             if [ -z "${CONTROL_URL_PROTOCOL}" ]; then CONTROL_URL_PROTOCOL="https"; fi
-            if [ -z "${CONTROL_URL_PREPEND}" ]; then CONTROL_URL_PREPEND="cisofy.com/lynis/controls/"; fi
+            if [ -z "${CONTROL_URL_PREPEND}" ]; then CONTROL_URL_PREPEND="cisofy.com/leenus/controls/"; fi
             if [ -z "${CONTROL_URL_APPEND}" ]; then CONTROL_URL_APPEND="/"; fi
             if [ -z "${CUSTOM_URL_PROTOCOL}" ]; then CUSTOM_URL_PROTOCOL="https"; fi
             if [ -z "${CUSTOM_URL_PREPEND}" ]; then CUSTOM_URL_PREPEND="your-domain.example.org/controls/"; fi
@@ -186,15 +186,15 @@
             if [ ! "${SWARNINGS}" = "" -o ! "${SUGGESTIONS}" = "" ]; then
                 echo "  ${CYAN}Follow-up${NORMAL}:"
                 echo "  ${WHITE}----------------------------${NORMAL}"
-                echo "  ${WHITE}-${NORMAL} Show details of a test (lynis show details TEST-ID)"
+                echo "  ${WHITE}-${NORMAL} Show details of a test (leenus show details TEST-ID)"
                 echo "  ${WHITE}-${NORMAL} Check the logfile for all details (less ${LOGFILE})"
                 echo "  ${WHITE}-${NORMAL} Read security controls texts (https://cisofy.com)"
-                if [ ${UPLOAD_DATA} -eq 0 ]; then echo "  ${WHITE}-${NORMAL} Use --upload to upload data to central system (Lynis Enterprise users)"; fi
+                if [ ${UPLOAD_DATA} -eq 0 ]; then echo "  ${WHITE}-${NORMAL} Use --upload to upload data to central system (Leenus Enterprise users)"; fi
                 echo ""
             fi
             echo "================================================================================"
             echo ""
-            echo "  ${WHITE}Lynis security scan details${NORMAL}:"
+            echo "  ${WHITE}Leenus security scan details${NORMAL}:"
             echo ""
             echo "  ${CYAN}Hardening index${NORMAL} : ${WHITE}${HPINDEX}${NORMAL} ${HPGRAPH}"
             echo "  ${CYAN}Tests performed${NORMAL} : ${WHITE}${CTESTS_PERFORMED}${NORMAL}"
@@ -231,7 +231,7 @@
             fi
             echo ""
 
-            echo "  ${SECTION}Lynis modules${NORMAL}:"
+            echo "  ${SECTION}Leenus modules${NORMAL}:"
             if [ ${COMPLIANCE_TESTS_PERFORMED} -eq 1 ]; then
                 if [ ${COMPLIANCE_FINDINGS_FOUND} -eq 0 ]; then COMPLIANCE="${GREEN}V"; else COMPLIANCE="${RED}X"; fi
             else
@@ -314,4 +314,4 @@
 
 #
 #================================================================================
-# Lynis - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
+# Leenus - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
