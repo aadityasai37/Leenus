@@ -1,8 +1,8 @@
 #!/bin/sh
-
+#aditya
 #################################################################################
 #
-#   Lynis
+#   Leenus
 # ------------------
 #
 # Copyright 2007-2013, Michael Boelen
@@ -10,9 +10,9 @@
 #
 # Website  : https://cisofy.com
 # Blog     : http://linux-audit.com
-# GitHub   : https://github.com/CISOfy/lynis
+# GitHub   : https://github.com/CISOfy/leenus
 #
-# Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+# Leenus comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
 # welcome to redistribute it under the terms of the GNU General Public License.
 # See LICENSE file for usage of this software.
 #
@@ -60,7 +60,7 @@
 
         CRONTAB_FILE="${ROOTDIR}etc/crontab"
         if [ -f ${CRONTAB_FILE} ]; then
-            ${EGREPBINARY} -q -s 'lynis audit system' ${CRONTAB_FILE} && LYNIS_CRONJOB="file:/etc/crontab"
+            ${EGREPBINARY} -q -s 'leenus audit system' ${CRONTAB_FILE} && LEENUS_CRONJOB="file:/etc/crontab"
             if IsWorldWritable ${CRONTAB_FILE}; then LogText "Result: insecure file permissions for cronjob file ${CRONTAB_FILE}"; Report "insecure_fileperms_cronjob[]=${CRONTAB_FILE}"; BAD_FILE_PERMISSIONS=1; AddHP 0 5; fi
             if ! IsOwnedByRoot ${CRONTAB_FILE}; then LogText "Result: incorrect owner found for cronjob file ${CRONTAB_FILE}"; Report "bad_fileowner_cronjob[]=${CRONTAB_FILE}"; BAD_FILE_OWNERSHIP=1; AddHP 0 5; fi
             FindCronJob ${CRONTAB_FILE}
@@ -86,7 +86,7 @@
                             if IsWorldWritable ${FILE}; then LogText "Result: insecure file permissions for cronjob file ${J}"; Report "insecure_fileperms_cronjob[]=${J}"; BAD_FILE_PERMISSIONS=1; AddHP 0 5; fi
                             if ! IsOwnedByRoot ${FILE}; then LogText "Result: incorrect owner found for cronjob file ${J}"; Report "bad_fileowner_cronjob[]=${J}"; BAD_FILE_OWNERSHIP=1; AddHP 0 5; fi
                             FILENAME=$(echo ${FILE} | ${AWKBINARY} -F/ '{print $NF}')
-                            if [ "${FILENAME}" = "lynis" ]; then ${EGREPBINARY} -q -s 'lynis audit system' ${CRONTAB_FILE} && LYNIS_CRONJOB="file:${FILE}"; fi
+                            if [ "${FILENAME}" = "leenus" ]; then ${EGREPBINARY} -q -s 'leenus audit system' ${CRONTAB_FILE} && LEENUS_CRONJOB="file:${FILE}"; fi
                             FindCronJob ${FILE}
                             if HasData "${sCRONJOBS}"; then
                                 for K in ${sCRONJOBS}; do
@@ -121,7 +121,7 @@
                             if IsWorldWritable ${FILE}; then LogText "Result: insecure file permissions for cronjob file ${FILE}"; Report "insecure_fileperms_cronjob[]=${FILE}"; BAD_FILE_PERMISSIONS=1; AddHP 0 5; fi
                             if ! IsOwnedByRoot ${FILE}; then LogText "Result: incorrect owner found for cronjob file ${FILE}"; Report "bad_fileowner_cronjob[]=${FILE}"; BAD_FILE_OWNERSHIP=1; AddHP 0 5; fi
                             FILENAME=$(echo ${FILE} | ${AWKBINARY} -F/ '{print $NF}')
-                            if [ "${FILENAME}" = "lynis" ]; then ${EGREPBINARY} -q -s 'lynis audit system' ${CRONTAB_FILE} && LYNIS_CRONJOB="file:${FILE}"; fi
+                            if [ "${FILENAME}" = "leenus" ]; then ${EGREPBINARY} -q -s 'leenus audit system' ${CRONTAB_FILE} && LEENUS_CRONJOB="file:${FILE}"; fi
                             LogText "Result: Found cronjob (${I}): ${FILE}"
                             Report "cronjob[]=${FILE}"
                         done
@@ -141,7 +141,7 @@
             FIND=$(${FINDBINARY} /var/spool/cron/crontabs -xdev -type f -print 2> /dev/null)
             for I in ${FIND}; do
                 if FileIsReadable ${I}; then
-                    ${EGREPBINARY} -q -s 'lynis audit system' ${I} && LYNIS_CRONJOB="file:${I}"
+                    ${EGREPBINARY} -q -s 'leenus audit system' ${I} && LEENUS_CRONJOB="file:${I}"
                     FindCronJob ${I}
                     for FILE in ${sCRONJOBS}; do
                         LogText "Found cronjob (/var/spool/cron/crontabs): ${I} (${FILE})"
@@ -154,7 +154,7 @@
                 FIND=$(find ${ROOTDIR}var/spool/cron -type f -print)
                 for I in ${FIND}; do
                     if FileIsReadable ${I}; then
-                        ${EGREPBINARY} -q -s 'lynis audit system' ${I} && LYNIS_CRONJOB="file:${I}"
+                        ${EGREPBINARY} -q -s 'leenus audit system' ${I} && LEENUS_CRONJOB="file:${I}"
                         FindCronJob ${I}
                         for FILE in ${sCRONJOBS}; do
                             LogText "Found cronjob in ${ROOTDIR}var/spool/cron: ${I} (${FILE})"
@@ -304,14 +304,14 @@
 #################################################################################
 #
 
-if [ -z "${LYNIS_CRONJOB}" ]; then
-    LogText "Result: no scheduled Lynis execution found (e.g. crontab, cronjob)"
+if [ -z "${LEENUS_CRONJOB}" ]; then
+    LogText "Result: no scheduled Leenus execution found (e.g. crontab, cronjob)"
 else
-    LogText "Result: found scheduled Lynis execution (${LYNIS_CRONJOB})"
+    LogText "Result: found scheduled Leenus execution (${LEENUS_CRONJOB})"
 fi
 
 WaitForKeyPress
 
 #
 #================================================================================
-# Lynis - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
+# Leenus - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
