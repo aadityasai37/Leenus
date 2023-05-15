@@ -1,8 +1,8 @@
 #!/bin/sh
-
+#aditya
 #################################################################################
 #
-#   Lynis
+#   Leenus
 # ------------------
 #
 # Copyright 2007-2013, Michael Boelen
@@ -10,9 +10,9 @@
 #
 # Website  : https://cisofy.com
 # Blog     : http://linux-audit.com
-# GitHub   : https://github.com/CISOfy/lynis
+# GitHub   : https://github.com/CISOfy/leenus
 #
-# Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+# Leenus comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
 # welcome to redistribute it under the terms of the GNU General Public License.
 # See LICENSE file for usage of this software.
 #
@@ -921,7 +921,7 @@
             *)
                 Display --indent 2 --text "- Checking uptime" --result "${STATUS_SKIPPED}" --color YELLOW
 
-                # Want to help improving Lynis? Share your operating system and a way to determine the uptime (in seconds)
+                # Want to help improving Leenus? Share your operating system and a way to determine the uptime (in seconds)
                 ReportException "${TEST_NO}:3" "No uptime test available yet for this operating system"
             ;;
         esac
@@ -1132,4 +1132,4 @@ WaitForKeyPress
 
 #
 #================================================================================
-# Lynis - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
+# Leenus - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
