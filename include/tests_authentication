@@ -1,8 +1,8 @@
 #!/bin/sh
-
+#aditya
 #################################################################################
 #
-#   Lynis
+#   Leenus
 # ------------------
 #
 # Copyright 2007-2013, Michael Boelen
@@ -10,9 +10,9 @@
 #
 # Website  : https://cisofy.com
 # Blog     : http://linux-audit.com
-# GitHub   : https://github.com/CISOfy/lynis
+# GitHub   : https://github.com/CISOfy/leenus
 #
-# Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+# Leenus comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
 # welcome to redistribute it under the terms of the GNU General Public License.
 # See LICENSE file for usage of this software.
 #
@@ -324,7 +324,7 @@
                 echo bigcrypt/descrypt
                 ;;
             *)
-                echo "Unknown password hashing method ${METHOD}. Please report to lynis-dev@cisofy.com"
+                echo "Unknown password hashing method ${METHOD}. Please report to leenus-dev@cisofy.com"
                 ;;
         esac
     }
@@ -471,7 +471,7 @@
             ;;
 
             *)
-                # Want to help improving Lynis? Determine what user IDs belong to normal user accounts
+                # Want to help improving Leenus? Determine what user IDs belong to normal user accounts
                 ReportException "${TEST_NO}:1" "Can not determine user accounts"
             ;;
         esac
@@ -1663,4 +1663,4 @@ WaitForKeyPress
 
 #
 #================================================================================
-# Lynis - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
+# Leenus - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
