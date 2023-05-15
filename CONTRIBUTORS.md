@@ -1,18 +1,18 @@
-# Lynis - CONTRIBUTORS
+# Leenus - CONTRIBUTORS
 
 ==========================================================================================
 
-The Lynis project is very thankful to the individuals who contributed to the project.
+The Leenus project is very thankful to the individuals who contributed to the project.
 
   Want to contribute as well? Here are some suggestions:
 
   - Create new tests for your favorite software packages
-  - Translate Lynis into your native language
+  - Translate Leenus into your native language
   - Report (unexpected) screen errors
   - Share missing results and findings
   - Check for grammar issues
 
-  See [CONTRIBUTING.md](https://github.com/CISOfy/lynis/blob/master/CONTRIBUTING.md) for more details.
+  See [CONTRIBUTING.md](https://github.com/CISOfy/leenus/blob/master/CONTRIBUTING.md) for more details.
 
 ==========================================================================================
 
@@ -30,7 +30,7 @@ The Lynis project is very thankful to the individuals who contributed to the pro
 
 ## Special Contributors
 
-These people made a significant impact to the development of Lynis:
+These people made a significant impact to the development of Leenus:
 
 * Michael Boelen, The Netherlands (original author)
 * Alexander Lobodzinski, Germany
