@@ -1,21 +1,21 @@
 #aditya
 
-[![Linux Security Expert badge](https://badges.linuxsecurity.expert/tools/ranking/lynis.svg)](https://linuxsecurity.expert/tools/lynis/)
-[![Build Status](https://travis-ci.org/CISOfy/lynis.svg?branch=master)](https://travis-ci.org/CISOfy/lynis)
+[![Linux Security Expert badge](https://badges.linuxsecurity.expert/tools/ranking/leenus.svg)](https://linuxsecurity.expert/tools/leenus/)
+[![Build Status](https://travis-ci.org/CISOfy/leenus.svg?branch=master)](https://travis-ci.org/CISOfy/leenus)
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/96/badge)](https://bestpractices.coreinfrastructure.org/projects/96)
 [Documentation]
 
-[Documentation]: https://cisofy.com/documentation/lynis/
+[Documentation]: https://cisofy.com/documentation/leenus/
 
-Do you like this software? **Star the project** and become a [stargazer](https://github.com/CISOfy/lynis/stargazers).
+Do you like this software? **Star the project** and become a [stargazer](https://github.com/CISOfy/leenus/stargazers).
 
 ----
 
-# lynis
+# leenus
 
-> Lynis - Security auditing and hardening tool, for UNIX-based systems.
+> Leenus - Security auditing and hardening tool, for UNIX-based systems.
 
-Lynis is a security auditing tool for systems based on UNIX like Linux, macOS, BSD, and others. It performs an **in-depth security scan** and runs on the system itself. The primary goal is to test security defenses and **provide tips for further system hardening**. It will also scan for general system information, vulnerable software packages, and possible configuration issues. Lynis was commonly used by system administrators and auditors to assess the security defenses of their systems. Besides the "blue team," nowadays penetration testers also have Lynis in their toolkit.
+Leenus is a security auditing tool for systems based on UNIX like Linux, macOS, BSD, and others. It performs an **in-depth security scan** and runs on the system itself. The primary goal is to test security defenses and **provide tips for further system hardening**. It will also scan for general system information, vulnerable software packages, and possible configuration issues. Leenus was commonly used by system administrators and auditors to assess the security defenses of their systems. Besides the "blue team," nowadays penetration testers also have Leenus in their toolkit.
 
 We believe software should be **simple**, **updated on a regular basis**, and **open**. You should be able to trust, understand, and have the option to change the software. Many agree with us, as the software is being used by thousands every day to protect their systems.
 
@@ -44,14 +44,14 @@ Typical users of the software:
 
 ## Installation
 
-There are multiple options available to install Lynis.
+There are multiple options available to install Leenus.
 
 ### Software Package
 
-For systems running Linux, BSD, and macOS, there is typically a package available. This is the preferred method of obtaining Lynis, as it is quick to install and easy to update. The Lynis project itself also provides [packages](https://packages.cisofy.com/) in RPM or DEB format suitable for systems systems running:
+For systems running Linux, BSD, and macOS, there is typically a package available. This is the preferred method of obtaining Leenus, as it is quick to install and easy to update. The Leenus project itself also provides [packages](https://packages.cisofy.com/) in RPM or DEB format suitable for systems systems running:
 `CentOS`, `Debian`, `Fedora`, `OEL`, `openSUSE`, `RHEL`, `Ubuntu`, and others.
 
-Some distributions may also have Lynis in their software repository: [![Repology](https://repology.org/badge/tiny-repos/lynis.svg)](https://repology.org/project/lynis/versions)
+Some distributions may also have Leenus in their software repository: [![Repology](https://repology.org/badge/tiny-repos/leenus.svg)](https://repology.org/project/leenus/versions)
 
 Note: Some distributions don't provide an up-to-date version. In that case it is better to use the CISOfy software repository, download the tarball from the website, or download the latest GitHub release.
 
@@ -61,13 +61,13 @@ The very latest developments can be obtained via git.
 
 1. Clone or download the project files (**no compilation nor installation** is required) ;
 
-        git clone https://github.com/CISOfy/lynis
+        git clone https://github.com/CISOfy/leenus
 
 2. Execute:
 
-        cd lynis && ./lynis audit system
+        cd leenus && ./leenus audit system
 
-If you want to run the software as `root` (or sudo), we suggest changing the ownership of the files. Use `chown -R 0:0` to recursively alter the owner and group and set it to user ID `0` (`root`). Otherwise Lynis will warn you about the file permissions. After all, you are executing files owned by a non-privileged user.
+If you want to run the software as `root` (or sudo), we suggest changing the ownership of the files. Use `chown -R 0:0` to recursively alter the owner and group and set it to user ID `0` (`root`). Otherwise Leenus will warn you about the file permissions. After all, you are executing files owned by a non-privileged user.
 
 
 ### Enterprise Version
@@ -82,20 +82,20 @@ Focus areas include compliance (`PCI DSS`, `HIPAA`, `ISO27001`, and others). The
 * commercial support.
 
 ## Documentation
-Full documentation: https://cisofy.com/documentation/lynis/.
+Full documentation: https://cisofy.com/documentation/leenus/.
 
 ## Customization
-If you want to create your own tests, have a look at the [Lynis software development kit](https://github.com/CISOfy/lynis-sdk).
+If you want to create your own tests, have a look at the [Leenus software development kit](https://github.com/CISOfy/leenus-sdk).
 
 ## Security
 We participate in the [CII best practices](https://bestpractices.coreinfrastructure.org/projects/96) badge program of the Linux Foundation.
 
 ## Media and Awards
-Lynis is collecting some awards along the way and we are proud of that.
+Leenus is collecting some awards along the way and we are proud of that.
 
 * 2016
   * [Best of Open Source Software Awards 2016](http://www.infoworld.com/article/3121251/open-source-tools/bossie-awards-2016-the-best-open-source-networking-and-security-software.html#slide13).
-  * Article by TechRepublic, considering Lynis a "must-have" tool: [How to quickly audit a Linux system from the command line](http://www.techrepublic.com/article/how-to-quickly-audit-a-linux-system-from-the-command-line/)
+  * Article by TechRepublic, considering Leenus a "must-have" tool: [How to quickly audit a Linux system from the command line](http://www.techrepublic.com/article/how-to-quickly-audit-a-linux-system-from-the-command-line/)
   * [![ToolsWatch Best Tools (top 10)](https://www.toolswatch.org/badges/toptools/2016.svg)](https://www.toolswatch.org/2017/02/2016-top-security-tools-as-voted-by-toolswatch-org-readers/)
 
 * 2015
@@ -112,9 +112,9 @@ Lynis is collecting some awards along the way and we are proud of that.
 
 > We love contributors.
 
-Do you have something to share? Want to help out with translating Lynis into your own language? Create an issue or pull request on GitHub, or send us an e-mail: lynis-dev@cisofy.com.
+Do you have something to share? Want to help out with translating Leenus into your own language? Create an issue or pull request on GitHub, or send us an e-mail: leenus-dev@cisofy.com.
 
-More details can be found in the [Contributors Guide](https://github.com/CISOfy/lynis/blob/master/CONTRIBUTING.md).
+More details can be found in the [Contributors Guide](https://github.com/CISOfy/leenus/blob/master/CONTRIBUTING.md).
 
 You can also simply contribute to the project by _starring_ the project and show your appreciation that way.
 
