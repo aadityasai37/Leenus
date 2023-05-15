@@ -1,8 +1,8 @@
 #!/bin/sh
-
+#aditya
 #################################################################################
 #
-#   Lynis
+#   Leenus
 # ------------------
 #
 # Copyright 2007-2013, Michael Boelen
@@ -10,9 +10,9 @@
 #
 # Website  : https://cisofy.com
 # Blog     : http://linux-audit.com
-# GitHub   : https://github.com/CISOfy/lynis
+# GitHub   : https://github.com/CISOfy/leenus
 #
-# Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+# Leenus comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
 # welcome to redistribute it under the terms of the GNU General Public License.
 # See LICENSE file for usage of this software.
 #
@@ -29,7 +29,7 @@
 #    AddSystemGroup             Adds a system to a group
 #    CheckFilePermissions       Check file permissions
 #    CheckItem                  Test for presence of a string in report file
-#    CheckUpdates               Determine if a new version of Lynis is available
+#    CheckUpdates               Determine if a new version of Leenus is available
 #    CleanUp                    Clean up files before closing program
 #    CountTests                 Count number of performed tests
 #    ContainsString             Find the needle (string) in the haystack (another string)
@@ -132,7 +132,7 @@
 
     ################################################################################
     # Name        : AddSetting()
-    # Description : Addition of a setting for display with 'lynis show settings'
+    # Description : Addition of a setting for display with 'leenus show settings'
     #
     # Parameters  : $1 = setting
     #               $2 = value
@@ -258,19 +258,19 @@
     CheckUpdates() {
         PROGRAM_LV="0000000000"; DB_MALWARE_LV="0000000000"; DB_FILEPERMS_LV="0000000000"
         if [ ${RUN_UPDATE_CHECK} -eq 1 ]; then
-            LYNIS_LV_RECORD="lynis-latest-version.cisofy.com."
+            LEENUS_LV_RECORD="leenus-latest-version.cisofy.com."
             FIND=$(which dig 2> /dev/null | grep -v "no [^ ]* in")
             if [ -n "${FIND}" ]; then
-                PROGRAM_LV=$(dig +short +time=3 -t txt lynis-latest-version.cisofy.com 2> /dev/null | grep -v "connection timed out" | sed 's/[".]//g' | grep "^[1-9][0-9][0-9]$")
+                PROGRAM_LV=$(dig +short +time=3 -t txt leenus-latest-version.cisofy.com 2> /dev/null | grep -v "connection timed out" | sed 's/[".]//g' | grep "^[1-9][0-9][0-9]$")
             else
                 FIND=$(which host 2> /dev/null | grep -v "no [^ ]* in ")
                 if [ -n "${FIND}" ]; then
-                    PROGRAM_LV=$(host -t txt -W 3 lynis-latest-version.cisofy.com 2> /dev/null | grep -v "connection timed out" | awk '{ if ($1=="lynis-latest-version.cisofy.com" && $3=="text") { print $4 }}' | sed 's/"//g' | grep "^[1-9][0-9][0-9]$")
+                    PROGRAM_LV=$(host -t txt -W 3 leenus-latest-version.cisofy.com 2> /dev/null | grep -v "connection timed out" | awk '{ if ($1=="leenus-latest-version.cisofy.com" && $3=="text") { print $4 }}' | sed 's/"//g' | grep "^[1-9][0-9][0-9]$")
                     if [ "${PROGRAM_LV}" = "" ]; then PROGRAM_LV=0; fi
                 else
                     FIND=$(which drill 2> /dev/null | grep -v "no [^ ]* in ")
                     if [ -n "${FIND}" ]; then
-                        PROGRAM_LV=$(drill txt ${LYNIS_LV_RECORD} | awk '{ if ($1=="lynis-latest-version.cisofy.com." && $4=="TXT") { print $5 }}' | tr -d '"' | grep "^[1-9][0-9][0-9]$")
+                        PROGRAM_LV=$(drill txt ${LEENUS_LV_RECORD} | awk '{ if ($1=="leenus-latest-version.cisofy.com." && $4=="TXT") { print $5 }}' | tr -d '"' | grep "^[1-9][0-9][0-9]$")
                         if [ -z "${PROGRAM_LV}" ]; then PROGRAM_LV=0; fi
                     else
                         LogText "Result: dig, drill or host not installed, update check skipped"
@@ -346,11 +346,11 @@
     CreateTempFile() {
         TEMP_FILE=""
         if [ "${OS}" = "AIX" ]; then
-            RANDOMSTRING1="lynis-$(od -N4 -tu /dev/random | awk 'NR==1 {print $2} {}')"
+            RANDOMSTRING1="leenus-$(od -N4 -tu /dev/random | awk 'NR==1 {print $2} {}')"
             TEMP_FILE="/tmp/${RANDOMSTRING1}"
             touch ${TEMP_FILE}
         else
-            TEMP_FILE=$(mktemp /tmp/lynis.XXXXXXXXXX) || exit 1
+            TEMP_FILE=$(mktemp /tmp/leenus.XXXXXXXXXX) || exit 1
         fi
         if [ ! "${TEMP_FILE}" = "" ]; then
             LogText "Action: created temporary file ${TEMP_FILE}"
@@ -435,7 +435,7 @@
             if [ ${USE_CWD} -eq 1 ]; then
                 tPROFILE_TARGETS="."
             else
-                tPROFILE_TARGETS="/usr/local/etc/lynis /etc/lynis /usr/local/lynis ."
+                tPROFILE_TARGETS="/usr/local/etc/leenus /etc/leenus /usr/local/leenus ."
             fi
             for PNAME in ${tPROFILE_NAMES}; do
                 for PLOC in ${tPROFILE_TARGETS}; do
@@ -452,7 +452,7 @@
                                 "custom.prf") CUSTOM_PROFILE="${FILE}" ;;
                                 "default.prf") DEFAULT_PROFILE="${FILE}" ;;
                             esac
-                            # Set profile directory to last match (Lynis could be both installed, and run as a separate download)
+                            # Set profile directory to last match (Leenus could be both installed, and run as a separate download)
                             if [ "${PLOC}" = "." ]; then PROFILEDIR="${WORKDIR}"; else PROFILEDIR="${PLOC}"; fi
                         fi
                     fi
@@ -597,7 +597,7 @@
         ${ECHOCMD:-echo} "  Function/test:  [$1]"
         ${ECHOCMD:-echo} "  Message:        ${BOLD}$2${NORMAL}"
         ${ECHOCMD:-echo} ""
-        ${ECHOCMD:-echo} "  Help improving the Lynis community with your feedback!"
+        ${ECHOCMD:-echo} "  Help improving the Leenus community with your feedback!"
         ${ECHOCMD:-echo} ""
         ${ECHOCMD:-echo} "  Steps:"
         ${ECHOCMD:-echo} "  - Ensure you are running the latest version ($0 update check)"
@@ -910,9 +910,9 @@
             return 2
         fi
 
-        if [ -f "${ROOTDIR}etc/lynis/hostids" ]; then
-            HOSTID=$(grep "^hostid=" ${ROOTDIR}etc/lynis/hostids | awk -F= '{print $2}')
-            HOSTID2=$(grep "^hostid2=" ${ROOTDIR}etc/lynis/hostids | awk -F= '{print $2}')
+        if [ -f "${ROOTDIR}etc/leenus/hostids" ]; then
+            HOSTID=$(grep "^hostid=" ${ROOTDIR}etc/leenus/hostids | awk -F= '{print $2}')
+            HOSTID2=$(grep "^hostid2=" ${ROOTDIR}etc/leenus/hostids | awk -F= '{print $2}')
             Debug "Used hostids file to fetch values"
             HOSTID_GEN="hostids-file"
             return 0
@@ -921,7 +921,7 @@
         FIND=""
         # Avoid some hashes (empty, only zeros)
         BLACKLISTED_HASHES="6ef1338f520d075957424741d7ed35ab5966ae97 adc83b19e793491b1c6ea0fd8b46cd9f32e592fc"
-        # Check which utilities we can use (e.g. lynis show hostids). Normally these are detected during binaries collecting.
+        # Check which utilities we can use (e.g. leenus show hostids). Normally these are detected during binaries collecting.
         if [ "${SHA1SUMBINARY}" = "" ]; then SHA1SUMBINARY=$(which sha1sum 2> /dev/null | grep -v "no [^ ]* in "); fi
         if [ "${SHA1SUMBINARY}" = "" ]; then SHA1SUMBINARY=$(which sha1 2> /dev/null | grep -v "no [^ ]* in "); fi
         if [ "${SHA256SUMBINARY}" = "" ]; then SHA256SUMBINARY=$(which sha256sum 2> /dev/null | grep -v "no [^ ]* in "); fi
@@ -1083,16 +1083,16 @@
                     else
                         ReportException "GetHostID" "No MAC address returned on macOS"
                     fi
-                    LYNIS_HOSTID2_PART1=$(hostname -s)
-                    if [ -n "${LYNIS_HOSTID2_PART1}" ]; then
-                        LogText "Info: using hostname ${LYNIS_HOSTID2_PART1}"
-                        LYNIS_HOSTID2_PART2=$(sysctl -n kern.uuid 2> /dev/null)
-                        if [ -n "${LYNIS_HOSTID2_PART2}" ]; then
-                            LogText "Info: using UUID ${LYNIS_HOSTID2_PART2}"
+                    LEENUS_HOSTID2_PART1=$(hostname -s)
+                    if [ -n "${LEENUS_HOSTID2_PART1}" ]; then
+                        LogText "Info: using hostname ${LEENUS_HOSTID2_PART1}"
+                        LEENUS_HOSTID2_PART2=$(sysctl -n kern.uuid 2> /dev/null)
+                        if [ -n "${LEENUS_HOSTID2_PART2}" ]; then
+                            LogText "Info: using UUID ${LEENUS_HOSTID2_PART2}"
                         else
                             LogText "Info: could not create HOSTID2 as kern.uuid sysctl key is missing"
                         fi
-                        HOSTID2=$(echo "${LYNIS_HOSTID2_PART1}${LYNIS_HOSTID2_PART2}" | shasum -a 256 | awk '{ print $1 }')
+                        HOSTID2=$(echo "${LEENUS_HOSTID2_PART1}${LEENUS_HOSTID2_PART2}" | shasum -a 256 | awk '{ print $1 }')
                     else
                         LogText "Info: could not create HOSTID2 as hostname is missing"
                     fi
@@ -1411,7 +1411,7 @@
         if [ $# -eq 1 ]; then
             if [ -n "$1" ]; then return 0; else return 1; fi
         else
-            ExitFatal "Function HasData called without parameters - look in log to determine where this happened, or use sh -x lynis to see all details."
+            ExitFatal "Function HasData called without parameters - look in log to determine where this happened, or use sh -x leenus to see all details."
         fi
     }
 
@@ -1539,7 +1539,7 @@
 
     IsEmpty() {
         if [ $# -eq 0 ]; then
-            ExitFatal "Function IsEmpty called without parameters - look in log to determine where this happened, or use sh -x lynis to see all details."
+            ExitFatal "Function IsEmpty called without parameters - look in log to determine where this happened, or use sh -x leenus to see all details."
         else
             if [ -z "$1" ]; then return 0; else return 1; fi
         fi
@@ -1813,7 +1813,7 @@
         # dmidecode
         # Values: VMware Virtual Platform / VirtualBox
         if [ -z "${SHORT}" ]; then
-            # Try to find dmidecode in case we did not check binaries (e.g. lynis show environment)
+            # Try to find dmidecode in case we did not check binaries (e.g. leenus show environment)
             if [ ${CHECK_BINARIES} -eq 0 ]; then DMIDECODEBINARY=$(command -v dmidecode 2> /dev/null); fi
             if [ -n "${DMIDECODEBINARY}" -a -x "${DMIDECODEBINARY}" -a ${PRIVILEGED} -eq 1 ]; then
                 LogText "Test: trying to guess virtualization with dmidecode"
@@ -2839,7 +2839,7 @@
             # Clean up temp files
             for FILE in ${TEMP_FILES}; do
                 # Temporary files should be in /tmp
-                TMPFILE=$(echo ${FILE} | grep -E "^/tmp/lynis" | grep -v "\.\.")
+                TMPFILE=$(echo ${FILE} | grep -E "^/tmp/leenus" | grep -v "\.\.")
                 if [ -n "${TMPFILE}" ]; then
                     if [ -f "${TMPFILE}" ]; then
                         LogText "Action: removing temporary file ${TMPFILE}"
@@ -2971,7 +2971,7 @@
     # Description : Log a suggestion to the report file
     #
     # Parameters  : <ID> <Suggestion> <Details> <Solution>
-    #               $1 = Test ID - Lynis ID (use CUST-.... for your own tests)
+    #               $1 = Test ID - Leenus ID (use CUST-.... for your own tests)
     #               $2 = Suggestion - Suggestion text to be displayed
     #               $3 = Details - Specific item or details
     #               $4 = Solution - Optional link for additional information:
@@ -3014,7 +3014,7 @@
             # New style warning format:
             # <ID> <Warning> <Details> <Solution>
             #
-            # <ID>         Lynis ID (use CUST-.... for your own tests)
+            # <ID>         Leenus ID (use CUST-.... for your own tests)
             # <Warning>    Warning text to be displayed
             # <Details>    Specific item or details
             # <Solution>   Optional link for additional information:
@@ -3507,7 +3507,7 @@
     # Description : Reports back the status of tool
     #
     # Returns     : text to screen
-    # Notes       : kill --signal USR1 <PID> or pkill --signal USR1 lynis
+    # Notes       : kill --signal USR1 <PID> or pkill --signal USR1 leenus
     ################################################################################
 
     Status() {
@@ -3740,5 +3740,5 @@
 
 
 #================================================================================
-# Lynis is part of Lynis Enterprise and released under GPLv3 license
+# Leenus is part of Leenus Enterprise and released under GPLv3 license
 # Copyright 2007-2021 - Michael Boelen, CISOfy - https://cisofy.com
