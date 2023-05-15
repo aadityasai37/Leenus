@@ -1,8 +1,8 @@
 #!/bin/sh
-
+#aditya
 #################################################################################
 #
-#   Lynis
+#   Leenus
 # ------------------
 #
 # Copyright 2007-2013, Michael Boelen
@@ -10,9 +10,9 @@
 #
 # Website  : https://cisofy.com
 # Blog     : http://linux-audit.com
-# GitHub   : https://github.com/CISOfy/lynis
+# GitHub   : https://github.com/CISOfy/leenus
 #
-# Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+# Leenus comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
 # welcome to redistribute it under the terms of the GNU General Public License.
 # See LICENSE file for usage of this software.
 #
@@ -24,7 +24,7 @@
 #
 # How to use:
 # ------------
-# Run: lynis show <option>
+# Run: leenus show <option>
 #
 ######################################################################
 
@@ -33,44 +33,44 @@ HELPERS="audit configure show update"
 OPTIONS="--auditor\n--cronjob (--cron)\n--debug\n--developer\n--devops\n--forensics\n--help (-h)\n--log-file\n--manpage (--man)\n--no-colors\n--no-log\n--no-plugins\n--pentest\n--profile\n--plugin-dir\n--quick (-Q)\n--quiet (-q)\n--report-file\n--reverse-colors\n--tests\n--tests-from-category\n--tests-from-group\n--usecwd\n--upload\n--verbose\n--version (-V)\n--wait\n--warnings-only"
 
 SHOW_ARGS="categories changelog commands dbdir details environment eol groups help hostids includedir language license logfile man options os pidfile plugindir profiles release releasedate report settings tests version workdir"
-SHOW_HELP="lynis show ${BROWN}categories${NORMAL}              (display test categories)
-lynis show ${BROWN}changelog${NORMAL} ${GRAY}[version]${NORMAL}     (release details)
-lynis show ${BROWN}commands${NORMAL}                (all available commands)
-lynis show ${BROWN}dbdir${NORMAL}                   (database directory)
-lynis show ${BROWN}details${NORMAL}                 (display test details from log file)
-lynis show ${BROWN}environment${NORMAL}             (hardware, virtual machine, or container type)
-lynis show ${BROWN}eol${NORMAL}                     (OS end-of-life status)
-lynis show ${BROWN}groups${NORMAL}                  (test groups)
-lynis show ${BROWN}help${NORMAL}                    (detailed information about arguments)
-lynis show ${BROWN}hostids${NORMAL}                 (unique IDs for this system)
-lynis show ${BROWN}includedir${NORMAL}              (include directory for tests and functions)
-lynis show ${BROWN}language${NORMAL}                (configured or detected language)
-lynis show ${BROWN}license${NORMAL}                 (license details)
-lynis show ${BROWN}logfile${NORMAL}                 (location of logfile)
-lynis show ${BROWN}man${NORMAL}                     (show help)
-lynis show ${BROWN}options${NORMAL}                 (available flags and options)
-lynis show ${BROWN}os${NORMAL}                      (operating system and version)
-lynis show ${BROWN}pidfile${NORMAL}                 (active file to stored process ID)
-lynis show ${BROWN}plugindir${NORMAL}               (directory with plugins)
-lynis show ${BROWN}profiles${NORMAL}                (discovered profiles)
-lynis show ${BROWN}release${NORMAL}                 (version)
-lynis show ${BROWN}releasedate${NORMAL}             (date of release)
-lynis show ${BROWN}report${NORMAL}                  (location of report data)
-lynis show ${BROWN}settings${NORMAL}                (display configured settings, ${WHITE}options:${NORMAL} ${CYAN}--brief --nocolors${NORMAL})
-lynis show ${BROWN}tests${NORMAL} ${GRAY}[test]${NORMAL}            (display information about one or more tests)
-lynis show ${BROWN}tests skipped${NORMAL}           (which tests to skip according profile)
-lynis show ${BROWN}version${NORMAL}                 (${PROGRAM_NAME} version)
-lynis show ${BROWN}workdir${NORMAL}                 (work directory)"
+SHOW_HELP="leenus show ${BROWN}categories${NORMAL}              (display test categories)
+leenus show ${BROWN}changelog${NORMAL} ${GRAY}[version]${NORMAL}     (release details)
+leenus show ${BROWN}commands${NORMAL}                (all available commands)
+leenus show ${BROWN}dbdir${NORMAL}                   (database directory)
+leenus show ${BROWN}details${NORMAL}                 (display test details from log file)
+leenus show ${BROWN}environment${NORMAL}             (hardware, virtual machine, or container type)
+leenus show ${BROWN}eol${NORMAL}                     (OS end-of-life status)
+leenus show ${BROWN}groups${NORMAL}                  (test groups)
+leenus show ${BROWN}help${NORMAL}                    (detailed information about arguments)
+leenus show ${BROWN}hostids${NORMAL}                 (unique IDs for this system)
+leenus show ${BROWN}includedir${NORMAL}              (include directory for tests and functions)
+leenus show ${BROWN}language${NORMAL}                (configured or detected language)
+leenus show ${BROWN}license${NORMAL}                 (license details)
+leenus show ${BROWN}logfile${NORMAL}                 (location of logfile)
+leenus show ${BROWN}man${NORMAL}                     (show help)
+leenus show ${BROWN}options${NORMAL}                 (available flags and options)
+leenus show ${BROWN}os${NORMAL}                      (operating system and version)
+leenus show ${BROWN}pidfile${NORMAL}                 (active file to stored process ID)
+leenus show ${BROWN}plugindir${NORMAL}               (directory with plugins)
+leenus show ${BROWN}profiles${NORMAL}                (discovered profiles)
+leenus show ${BROWN}release${NORMAL}                 (version)
+leenus show ${BROWN}releasedate${NORMAL}             (date of release)
+leenus show ${BROWN}report${NORMAL}                  (location of report data)
+leenus show ${BROWN}settings${NORMAL}                (display configured settings, ${WHITE}options:${NORMAL} ${CYAN}--brief --nocolors${NORMAL})
+leenus show ${BROWN}tests${NORMAL} ${GRAY}[test]${NORMAL}            (display information about one or more tests)
+leenus show ${BROWN}tests skipped${NORMAL}           (which tests to skip according profile)
+leenus show ${BROWN}version${NORMAL}                 (${PROGRAM_NAME} version)
+leenus show ${BROWN}workdir${NORMAL}                 (work directory)"
 
 AUDIT_ARGS="( dockerfile | system )"
 AUDIT_HELP="
-  ${WHITE}lynis audit <target>${NORMAL}
+  ${WHITE}leenus audit <target>${NORMAL}
 
   ${CYAN}audit dockerfile ${BROWN}<file>${NORMAL}
 
   Perform security audit on a Docker build file
   ${GRAY}Example:${NORMAL}
-    lynis audit dockerfile Dockerfile
+    leenus audit dockerfile Dockerfile
 
 
   ${CYAN}audit system ${GRAY}[options]${NORMAL}
@@ -78,10 +78,10 @@ AUDIT_HELP="
   Perform security system audit
 
   ${GRAY}Examples:${NORMAL}
-    lynis audit system
-    lynis audit system --cronjob
-    lynis audit system --profile developer.prf
-    lynis audit system --quick
+    leenus audit system
+    leenus audit system --cronjob
+    leenus audit system --profile developer.prf
+    leenus audit system --quick
 
 
   ${CYAN}audit system remote ${BROWN}<target> ${GRAY}[options]${NORMAL}
@@ -89,21 +89,21 @@ AUDIT_HELP="
   Perform security system audit on a remote target
 
   ${GRAY}Examples:${NORMAL}
-    lynis audit system remote 192.168.1.100
-    lynis audit system remote 192.168.1.100 --no-colors
+    leenus audit system remote 192.168.1.100
+    leenus audit system remote 192.168.1.100 --no-colors
 
 "
 
 GENERATE_ARGS="( --save )"
 GENERATE_HELP="
   Generate random value for hostid and hostid2
-  ${WHITE}lynis generate hostids${NORMAL}
+  ${WHITE}leenus generate hostids${NORMAL}
 
   Generate and save values
-  ${WHITE}lynis generate hostids --save${NORMAL}
+  ${WHITE}leenus generate hostids --save${NORMAL}
 
-  Generate systemd units to run Lynis on a schedule (e.g. daily)
-  ${WHITE}lynis generate systemd-units${NORMAL}
+  Generate systemd units to run Leenus on a schedule (e.g. daily)
+  ${WHITE}leenus generate systemd-units${NORMAL}
 
 "
 
@@ -130,7 +130,7 @@ UPLOAD_ONLY_HELP="
 SHOW_SETTINGS_ARGS="--brief --configured-only --nocolors"
 SHOW_TESTS_ARGS="skipped"
 
-COMMANDS_AUDIT_SYSTEM_USAGE="Usage: lynis audit system"
+COMMANDS_AUDIT_SYSTEM_USAGE="Usage: leenus audit system"
 COMMANDS_AUDIT_SYSTEM_FUNCTION="Function: performs a security audit of the system"
 
 if [ $# -gt 0 ]; then
@@ -174,7 +174,7 @@ if [ $# -gt 0 ]; then
                             SEARCH=$(echo ${LINE} | sed 's/^## //' | grep -E "^${PROGRAM_NAME} ${SEARCH_VERSION}")
                             if [ $? -eq 0 ]; then STARTED=1; ${ECHOCMD} "${BOLD}${LINE}${NORMAL}"; fi
                         else
-                            # Stop if we find the next Lynis version
+                            # Stop if we find the next Leenus version
                             SEARCH=$(echo ${LINE} | sed 's/^## //' | grep -E "^${PROGRAM_NAME} [0-9]\.[0-9]\.[0-9]")
                             if [ $? -eq 0 ]; then
                                 break
@@ -187,10 +187,10 @@ if [ $# -gt 0 ]; then
                     DisplayError "Could not find this version in the changelog"
                     ${ECHOCMD} ""
                     ${ECHOCMD} "${HEADER}Usage:${NORMAL}"
-                    ${ECHOCMD} "$0 lynis show changelog [version]"
+                    ${ECHOCMD} "$0 leenus show changelog [version]"
                     ${ECHOCMD} ""
                     ${ECHOCMD} "${HEADER}${PROGRAM_NAME} versions:${NORMAL}"
-                    SEARCH=$(sed 's/^## //' ${CHANGELOG} | grep -E "^Lynis [0-9]\.[0-9]\.[0-9] " | awk '{print $2}' | sort -n)
+                    SEARCH=$(sed 's/^## //' ${CHANGELOG} | grep -E "^Leenus [0-9]\.[0-9]\.[0-9] " | awk '{print $2}' | sort -n)
                     ${ECHOCMD} ${SEARCH}
                     ExitFatal
                 fi
@@ -203,7 +203,7 @@ if [ $# -gt 0 ]; then
             if [ $# -eq 1 ]; then
                 ${ECHOCMD} "\n${WHITE}Commands:${NORMAL}"
                 for ITEM in ${COMMANDS}; do
-                    ${ECHOCMD} "lynis ${CYAN}${ITEM}${NORMAL}"
+                    ${ECHOCMD} "leenus ${CYAN}${ITEM}${NORMAL}"
                 done
                 ${ECHOCMD} ""
             else
@@ -222,7 +222,7 @@ if [ $# -gt 0 ]; then
                     shift
                     case $1 in
                         "dockerfile")
-                            ${ECHOCMD} "Usage: lynis audit dockerfile <file>"
+                            ${ECHOCMD} "Usage: leenus audit dockerfile <file>"
                         ;;
                         "system")
                             ${ECHOCMD} "${COMMANDS_AUDIT_SYSTEM_USAGE}\n${COMMANDS_AUDIT_SYSTEM_FUNCTION}\n"
@@ -240,7 +240,7 @@ if [ $# -gt 0 ]; then
         "details")
             if [ -z "${LOGFILE}" ]; then DisplayError "Could not find log file to parse"; fi
             if [ $# -eq 1 ]; then
-                DisplayError "This command needs a test ID (e.g. CORE-1000) to search for. This command is used after a scan (lynis audit system). Run 'lynis show tests' to see all available tests."
+                DisplayError "This command needs a test ID (e.g. CORE-1000) to search for. This command is used after a scan (leenus audit system). Run 'leenus show tests' to see all available tests."
             else
                 shift
                 if [ $# -eq 1 ]; then
@@ -289,7 +289,7 @@ if [ $# -gt 0 ]; then
                     ${ECHOCMD} "${CYAN}${ITEM}${NORMAL}"
                 done
                 ${ECHOCMD} ""
-                ${ECHOCMD} "Use 'lynis show help ${CYAN}<command>${NORMAL}' to see details"
+                ${ECHOCMD} "Use 'leenus show help ${CYAN}<command>${NORMAL}' to see details"
                 ${ECHOCMD} ""; ${ECHOCMD} ""
                 ${ECHOCMD} "${WHITE}Options${NORMAL}:\n${GRAY}${OPTIONS}${NORMAL}"
             else
@@ -302,7 +302,7 @@ if [ $# -gt 0 ]; then
                    "update") ${ECHOCMD} "${UPDATE_HELP}" ;;
                    "upload-only") ${ECHOCMD} "${UPLOAD_ONLY_HELP}" ;;
                    "?") ${ECHOCMD} "${SHOW_ARGS}" ;;
-                   *) ${ECHOCMD} "Unknown argument provided for lynis show help" ;;
+                   *) ${ECHOCMD} "Unknown argument provided for leenus show help" ;;
                 esac
             fi
             ;;
@@ -318,7 +318,7 @@ if [ $# -gt 0 ]; then
         "language")             ${ECHOCMD} "${LANGUAGE}" ;;
         "license")              ${ECHOCMD} "${PROGRAM_LICENSE}" ;;
         "logfile")              ${ECHOCMD} "${LOGFILE}" ;;
-        "man")                  ${ECHOCMD} "Use ./lynis --man or man lynis" ;;
+        "man")                  ${ECHOCMD} "Use ./leenus --man or man leenus" ;;
         "options")              ${ECHOCMD} "${OPTIONS}" ;;
         "os")
                                 ${ECHOCMD} "OS=${OS}"
@@ -344,9 +344,9 @@ if [ $# -gt 0 ]; then
                    "--configured-only" | "--co") CONFIGURED_ONLY_OUTPUT=1 ;;
                    "--nocolors" | "--no-colors" | "--nc") COLORED_OUTPUT=0; COLORS=0 ;;
                    *)
-                       ${ECHOCMD} "${RED}Error${NORMAL}: Invalid argument provided to 'lynis show settings'\n\n"
+                       ${ECHOCMD} "${RED}Error${NORMAL}: Invalid argument provided to 'leenus show settings'\n\n"
                        ${ECHOCMD} "Suggestions:"
-                       for ITEM in ${SHOW_SETTINGS_ARGS}; do ${ECHOCMD} "lynis show settings ${ITEM}"; done
+                       for ITEM in ${SHOW_SETTINGS_ARGS}; do ${ECHOCMD} "leenus show settings ${ITEM}"; done
                        ExitFatal
                    ;;
                 esac
@@ -461,12 +461,12 @@ if [ $# -gt 0 ]; then
         "version")              ${ECHOCMD} "${PROGRAM_VERSION}" ;;
         "workdir")              ${ECHOCMD} "${WORKDIR}" ;;
         "?")                    ${ECHOCMD} "${SHOW_ARGS}" ;;
-        *)                      ${ECHOCMD} "Unknown argument '${RED}$1${NORMAL}' for lynis show" ;;
+        *)                      ${ECHOCMD} "Unknown argument '${RED}$1${NORMAL}' for leenus show" ;;
     esac
 else
     ${ECHOCMD} "\n  ${WHITE}Provide an additional argument${NORMAL}\n\n"
     for ITEM in ${SHOW_ARGS}; do
-        ${ECHOCMD} "    lynis show ${BROWN}${ITEM}${NORMAL}"
+        ${ECHOCMD} "    leenus show ${BROWN}${ITEM}${NORMAL}"
     done
     ${ECHOCMD} "\n"
     ${ECHOCMD} ""
