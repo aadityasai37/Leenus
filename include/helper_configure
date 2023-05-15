@@ -2,7 +2,7 @@
 #aditya
 #################################################################################
 #
-#   Lynis
+#   Leenus
 # ------------------
 #
 # Copyright 2007-2013, Michael Boelen
@@ -10,15 +10,15 @@
 #
 # Website  : https://cisofy.com
 # Blog     : http://linux-audit.com
-# GitHub   : https://github.com/CISOfy/lynis
+# GitHub   : https://github.com/CISOfy/leenus
 #
-# Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+# Leenus comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
 # welcome to redistribute it under the terms of the GNU General Public License.
 # See LICENSE file for usage of this software.
 #
 ######################################################################
 #
-# Helper program to configure Lynis
+# Helper program to configure Leenus
 #
 ######################################################################
 #
@@ -26,8 +26,8 @@
 # ------------
 #
 # Run:
-#   lynis configure settings quick
-#   lynis configure settings quick=yes:debug=yes
+#   leenus configure settings quick
+#   leenus configure settings quick=yes:debug=yes
 #
 ######################################################################
 
@@ -63,12 +63,12 @@
 
         # Determine where profiles are stored
         if [ -z "${PROFILEDIR}" ]; then
-            ${ECHOCMD} "Can not configure Lynis, as profile directory is unknown"
+            ${ECHOCMD} "Can not configure Leenus, as profile directory is unknown"
             ExitFatal
         fi
         if [ -z "${CUSTOM_PROFILE}" ]; then
             ${ECHOCMD} "No custom profile found yet."
-            ${ECHOCMD} "Suggestion: create one with 'touch custom.prf' or 'touch /etc/lynis/custom.prf'"
+            ${ECHOCMD} "Suggestion: create one with 'touch custom.prf' or 'touch /etc/leenus/custom.prf'"
             ExitFatal
         fi
 
