@@ -11,7 +11,7 @@ Do you like this software? **Star the project** and become a [stargazer](https:/
 
 ----
 
-# leenus
+# Leenus
 
 > Leenus - Security auditing and hardening tool, for UNIX-based systems.
 
