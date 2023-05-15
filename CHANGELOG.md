@@ -1,6 +1,6 @@
-# Lynis Changelog
+# Leenus Changelog
 
-## Lynis 3.0.9 (not released yet)
+## Leenus 3.0.9 (not released yet)
 
 ### Changed
 - DBS-1820 - added newer style format for Mongo authorization setting
@@ -8,7 +8,7 @@
 
 ---------------------------------------------------------------------------------
 
-## Lynis 3.0.8 (2022-05-17)
+## Leenus 3.0.8 (2022-05-17)
 
 ### Added
 - MALW-3274 - Detect McAfee VirusScan Command Line Scanner
@@ -30,7 +30,7 @@
 
 ---------------------------------------------------------------------------------
 
-## Lynis 3.0.7 (2022-01-18)
+## Leenus 3.0.7 (2022-01-18)
 
 ### Added
 - MALW-3290 - Show status of malware components
@@ -44,11 +44,11 @@
 - NETW-3200 - Allow unknown number of spaces in modprobe blacklists
 - PKGS-7320 - Support for Garuda Linux and arch-audit
 - Several improvements for busybox shell
-- Russian translation of Lynis extended
+- Russian translation of Leenus extended
 
 ---------------------------------------------------------------------------------
 
-## Lynis 3.0.6 (2021-07-22)
+## Leenus 3.0.6 (2021-07-22)
 
 ### Added
 - OS detection: Artix Linux, macOS Monterey, NethServer, openSUSE MicroOS
@@ -67,7 +67,7 @@
 
 ---------------------------------------------------------------------------------
 
-## Lynis 3.0.5 (2021-07-02)
+## Leenus 3.0.5 (2021-07-02)
 
 ### Added
 - OS detection of Arch Linux 32, BunsenLabs Linux, and Rocky Linux
@@ -83,7 +83,7 @@
 
 ---------------------------------------------------------------------------------
 
-## Lynis 3.0.4 (2021-05-11)
+## Leenus 3.0.4 (2021-05-11)
 
 ### Added
 - ACCT-9670 - Detection of cmd tooling
@@ -97,11 +97,11 @@
 - FIRE-4540 - Corrected nftables empy ruleset test
 - LOGG-2138 - Do not check for klogd when metalog is being used
 - TIME-3185 - Improved support for Debian stretch
-- Corrected issue when Lynis is not executed directly from lynis directory
+- Corrected issue when Leenus is not executed directly from leenus directory
 
 ---------------------------------------------------------------------------------
 
-## Lynis 3.0.3 (2021-01-07)
+## Leenus 3.0.3 (2021-01-07)
 
 ### Added
 - HRDN-7231 - Check for registered non-native binary formats
@@ -114,7 +114,7 @@
 
 ---------------------------------------------------------------------------------
 
-## Lynis 3.0.2 (2020-12-24)
+## Leenus 3.0.2 (2020-12-24)
 
 ### Added
 - AUTH-9284 - Scan for locked user accounts in /etc/passwd
@@ -148,7 +148,7 @@
 
 ---------------------------------------------------------------------------------
 
-## Lynis 3.0.1 (2020-10-05)
+## Leenus 3.0.1 (2020-10-05)
 
 ### Added
 - Detection of Alpine Linux
@@ -186,9 +186,9 @@
 
 ---------------------------------------------------------------------------------
 
-## Lynis 3.0.0 (2020-06-18)
+## Leenus 3.0.0 (2020-06-18)
 
-This is a major release of Lynis and includes several big changes.
+This is a major release of Leenus and includes several big changes.
 Some of these changes may break your current usage of the tool, so test before
 deployment!
 
@@ -198,7 +198,7 @@ This release resolves two security issues
 * CVE-2019-13033 - Discovered by Sander Bos
 
 ### Breaking change: Non-interactive by default
-Lynis now runs non-interactive by default, to be more in line with the Unix
+Leenus now runs non-interactive by default, to be more in line with the Unix
 philosophy. So the previously used '--quick' option is now default, and the tool
 will only wait when using the '--wait' option.
 
@@ -225,7 +225,7 @@ Using the relevant options, the scan will change base on the intended goal.
 - Security: additional safeguard by testing if common system tools are available
 - Security: test parameters and arguments for presence of control characters
 - Security: filtering out unexpected characters from profiles
-- Security: test if setuid bit is set on Lynis binary
+- Security: test if setuid bit is set on Leenus binary
 - New function: DisplayException
 - New function: DisplayWarning
 - New function: Equals
@@ -261,8 +261,8 @@ Using the relevant options, the scan will change base on the intended goal.
 - New test: TIME-3181 - check status of OpenNTPD time synchronisation
 - New test: TIME-3182 - check OpenNTPD has working peers
 - New report key: openssh_daemon_running
-- New command: lynis generate systemd-units
-- Sending USR1 signal to Lynis process will show active status
+- New command: leenus generate systemd-units
+- Sending USR1 signal to Leenus process will show active status
 - Measure timing of tests and report slow tests (10+ seconds)
 - Initial support for Clear Linux OS
 - Initial support for PureOS
@@ -348,9 +348,9 @@ Using the relevant options, the scan will change base on the intended goal.
 - TOOL-5002 - differentiate between a discovered binary and running process
 - TOOL-5160 - added support for OSSEC agent daemon
 - Perform additional check to ensure pacman package manager is used
-- Use 'pre-release/release' (was: 'dev/final') with 'lynis show release'
+- Use 'pre-release/release' (was: 'dev/final') with 'leenus show release'
 - Use only locations from PATH environment variable, unless it is not defined
-- Show tip to use 'lynis generate hostids' when host IDs are missing
+- Show tip to use 'leenus generate hostids' when host IDs are missing
 - The 'show changelog' command works again for newer versions
 - Several code cleanups, simplification of commands, and code standardization
 - Tests using lsof may ignore individual threads (if supported)
@@ -358,7 +358,7 @@ Using the relevant options, the scan will change base on the intended goal.
 - Tests can require detected package manager (--package-manager-required)
 - Do not show tool tips when quiet option is used
 - Improved screen output in several tests
-- Extended output of 'lynis update info'
+- Extended output of 'leenus update info'
 - Improved support for NetBSD
 - Test if profiles are readable
 - systemd service file adjusted
@@ -367,7 +367,7 @@ Using the relevant options, the scan will change base on the intended goal.
 
 ---------------------------------------------------------------------------------
 
-## Lynis 2.7.5 (2019-06-24)
+## Leenus 2.7.5 (2019-06-24)
 
 ### Added
 - Danish translation
@@ -387,7 +387,7 @@ Using the relevant options, the scan will change base on the intended goal.
 
 ---------------------------------------------------------------------------------
 
-## Lynis 2.7.4 (2019-04-21)
+## Leenus 2.7.4 (2019-04-21)
 
 This is a bigger release than usual, including several new tests created by
 Capashenn (GitHub). It is a coincidence that it is released exactly one month
@@ -423,10 +423,10 @@ after the previous version and on Easter. No easter eggs, only improvements!
 
 ---------------------------------------------------------------------------------
 
-## Lynis 2.7.3 (2019-03-21)
+## Leenus 2.7.3 (2019-03-21)
 
 ### Added
-- Detection for Lynis being scheduled (e.g. cronjob)
+- Detection for Leenus being scheduled (e.g. cronjob)
 
 ### Changed
 - HTTP-6624 - Improved logging for test
@@ -442,7 +442,7 @@ after the previous version and on Easter. No easter eggs, only improvements!
 
 ---------------------------------------------------------------------------------
 
-## Lynis 2.7.2 (2019-03-07)
+## Leenus 2.7.2 (2019-03-07)
 
 ### Added
 - AUTH-9409 - Support for doas (OpenBSD)
@@ -452,7 +452,7 @@ after the previous version and on Easter. No easter eggs, only improvements!
 - BOOT-5262 - Check OpenBSD boot daemons
 - BOOT-5263 - Test permissions for boot files and scripts
 - Support for end-of-life detection of the operating system
-- New 'lynis show eol' command
+- New 'leenus show eol' command
 - Korean translation
 
 ### Changed
@@ -467,7 +467,7 @@ after the previous version and on Easter. No easter eggs, only improvements!
 
 ---------------------------------------------------------------------------------
 
-## Lynis 2.7.1 (2019-01-30)
+## Leenus 2.7.1 (2019-01-30)
 
 ### Added
 - Support for macOS Mojave
@@ -484,7 +484,7 @@ after the previous version and on Easter. No easter eggs, only improvements!
 
 ---------------------------------------------------------------------------------
 
-## Lynis 2.7.0 (2018-10-26)
+## Leenus 2.7.0 (2018-10-26)
 
 ### Added
 - MACF-6240 - Detection of TOMOYO binary
@@ -499,15 +499,15 @@ after the previous version and on Easter. No easter eggs, only improvements!
 
 ---------------------------------------------------------------------------------
 
-## Lynis 2.6.9 (2018-09-19)
+## Leenus 2.6.9 (2018-09-19)
 
 ### Changed
 - Man page has been updated
-- Command 'lynis show options' provides up-to-date list
+- Command 'leenus show options' provides up-to-date list
 - Option '--dump-options' is deprecated
 - Several options and commands have been extended with more examples
 - OS detection now supports openSUSE specific distribution names
-- Changed command output when using 'lynis audit system remote'
+- Changed command output when using 'leenus audit system remote'
 - DBS-1882  - added /usr/local/redis/etc path and QNAP support
 - PKGS-7322 - updated solution text
 - KRNL-5788 - ignore exception when no vmlinuz file was discovered
@@ -515,7 +515,7 @@ after the previous version and on Easter. No easter eggs, only improvements!
 
 ---------------------------------------------------------------------------------
 
-## Lynis 2.6.8 (2018-08-23)
+## Leenus 2.6.8 (2018-08-23)
 
 ### Changed
 - BOOT-5104 - improved parsing of boot parameters to init process
@@ -526,7 +526,7 @@ after the previous version and on Easter. No easter eggs, only improvements!
 
 ---------------------------------------------------------------------------------
 
-## Lynis 2.6.7 (2018-08-09)
+## Leenus 2.6.7 (2018-08-09)
 
 ### Changed
 - BOOT-5104 - Added busybox as a service manager
@@ -534,11 +534,11 @@ after the previous version and on Easter. No easter eggs, only improvements!
 - LOGG-2190 - Ignore /dev/zero and /dev/[aio] as deleted files
 - SSH-7408  - Changed classification of SSH root login with keys
 - Docker scan uses new format for maintainer value
-- New URL structure on CISOfy website implemented for Lynis controls
+- New URL structure on CISOfy website implemented for Leenus controls
 
 ---------------------------------------------------------------------------------
 
-## Lynis 2.6.6 (2018-07-06)
+## Leenus 2.6.6 (2018-07-06)
 
 ### Changed
 * New format of changelog (https://keepachangelog.com/en/1.0.0/)
@@ -550,7 +550,7 @@ after the previous version and on Easter. No easter eggs, only improvements!
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.6.5 (2018-06-26)
+Leenus 2.6.5 (2018-06-26)
 
 Tests:
 ------
@@ -561,7 +561,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.6.4 (2018-05-02)
+Leenus 2.6.4 (2018-05-02)
 
 Changes:
 --------
@@ -580,7 +580,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.6.3 (2018-03-07)
+Leenus 2.6.3 (2018-03-07)
 
 Changes:
 --------
@@ -599,7 +599,7 @@ Plugins:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.6.2 (2018-02-13)
+Leenus 2.6.2 (2018-02-13)
 
 Changes:
 --------
@@ -609,7 +609,7 @@ Changes:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.6.1 (2018-01-26)
+Leenus 2.6.1 (2018-01-26)
 
 Changes:
 --------
@@ -630,7 +630,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.6.0 (2018-01-18)
+Leenus 2.6.0 (2018-01-18)
 
 Changes:
 --------
@@ -647,7 +647,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.5.9 (2018-01-12)
+Leenus 2.5.9 (2018-01-12)
 
 Changes:
 --------
@@ -663,7 +663,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.5.8 (2017-12-28)
+Leenus 2.5.8 (2017-12-28)
 
 Changes:
 --------
@@ -679,7 +679,7 @@ Plugins:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.5.7 (2017-10-29)
+Leenus 2.5.7 (2017-10-29)
 
 Changes:
 --------
@@ -690,7 +690,7 @@ Changes:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.5.6 (2017-10-27)
+Leenus 2.5.6 (2017-10-27)
 
 Changes:
 --------
@@ -709,7 +709,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.5.5 (2017-09-07)
+Leenus 2.5.5 (2017-09-07)
 
 Changes:
 --------
@@ -721,7 +721,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.5.4 (2017-09-05)
+Leenus 2.5.4 (2017-09-05)
 
 Changes:
 --------
@@ -740,7 +740,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.5.3 (2017-08-17)
+Leenus 2.5.3 (2017-08-17)
 
 Changes:
 --------
@@ -762,7 +762,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.5.2 (2017-07-10)
+Leenus 2.5.2 (2017-07-10)
 
 Changes:
 --------
@@ -770,13 +770,13 @@ Changes:
 - Check for presence of locale binary
 - Suhosin detection improvements
 - Generic code improvements
-- Changed 'lynis audit system remote' routine
+- Changed 'leenus audit system remote' routine
 - Support for macOS High Sierra
 - French translation updated
 
-Lynis Enterprise:
+Leenus Enterprise:
 -----------------
-- Allow 'tags' and 'system-customer-name' to be specified via Lynis client
+- Allow 'tags' and 'system-customer-name' to be specified via Leenus client
 
 Tests:
 ------
@@ -788,7 +788,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.5.1 (2017-05-31)
+Leenus 2.5.1 (2017-05-31)
 
 Changes:
 --------
@@ -804,7 +804,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.5.0 (2017-05-03)
+Leenus 2.5.0 (2017-05-03)
 
 During the development of this release, the project got informed about a flaw
 that possibly could be abused by a local attacker. Even with the small risk of
@@ -835,7 +835,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.4.8 (2017-03-29)
+Leenus 2.4.8 (2017-03-29)
 
 Changes:
 * More PHP paths added
@@ -849,7 +849,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.4.7 (2017-03-22)
+Leenus 2.4.7 (2017-03-22)
 
 Changes:
 * Minor code cleanups
@@ -863,7 +863,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.4.6 (2017-03-15)
+Leenus 2.4.6 (2017-03-15)
 
 Changes:
 --------
@@ -885,7 +885,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.4.5 (2017-03-09)
+Leenus 2.4.5 (2017-03-09)
 
 Changes:
 --------
@@ -903,7 +903,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.4.4 (2017-03-01)
+Leenus 2.4.4 (2017-03-01)
 
 Changes:
 --------
@@ -920,7 +920,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.4.3 (2017-02-22)
+Leenus 2.4.3 (2017-02-22)
 
 Changes:
 --------
@@ -936,7 +936,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.4.2 (2017-02-15)
+Leenus 2.4.2 (2017-02-15)
 
 Changes:
 --------
@@ -957,7 +957,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.4.1 (2017-02-09)
+Leenus 2.4.1 (2017-02-09)
 
 Changes:
 --------
@@ -979,9 +979,9 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.4.0 (2016-10-27)
+Leenus 2.4.0 (2016-10-27)
 
-Exactly one month after previous release, the Lynis project is proud to announce
+Exactly one month after previous release, the Leenus project is proud to announce
 a new release. This release had the specific focus to improve support for macOS
 users. Thanks to testers and contributors to make this possible.
 
@@ -994,9 +994,9 @@ New:
 * Enhanced support for macOS, including HostID2 generation for macOS
 * Support for CoreOS
 * Detection for pkg binary (FreeBSD)
-* New command: lynis show hostids (show host ID)
-* New command: lynis show environment (hardware, VM, or container type)
-* New command: lynis show os (show operating system details)
+* New command: leenus show hostids (show host ID)
+* New command: leenus show environment (hardware, VM, or container type)
+* New command: leenus show os (show operating system details)
 
 Changes:
 --------
@@ -1025,12 +1025,12 @@ Plugins (community and commercial):
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.3.4 (2016-09-27)
+Leenus 2.3.4 (2016-09-27)
 
 Changes:
 --------
 * Skip update message when using the 'show' helper
-* Instead of opening the log file, you can now use 'lynis show details' followed
+* Instead of opening the log file, you can now use 'leenus show details' followed
   by the test ID. It will show the relevant section.
 * Several tests have extended log details
 * Many style improvements as part of ongoing refactoring of the code
@@ -1061,7 +1061,7 @@ Tests:
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.3.3 (2016-08-23)
+Leenus 2.3.3 (2016-08-23)
 
 
 Upgrade note
@@ -1143,14 +1143,14 @@ Tests
 * LOGG-2190 - Ignore MySQL files in /tmp from early MySQL 5.x releases
 * LOGG-2192 - New test to check opened log files that are empty
 
-Lynis Enterprise integration
+Leenus Enterprise integration
 ----------------------------
 * Tag 'redis-server' is added for systems running Redis
 
 
 ---------------------------------------------------------------------------------
 
-Lynis 2.3.2 (2016-08-09)
+Leenus 2.3.2 (2016-08-09)
 
 
 Categories and Groups
@@ -1159,7 +1159,7 @@ Tests are now grouped by their focus area and named 'groups' accordingly.
 Besides groups, each test will belong to a category (performance, privacy, or
 security).
 
-Commands: lynis show categories, lynis show groups
+Commands: leenus show categories, leenus show groups
 Options: --tests-from-category, --tests-from-group
 
 Note: You might need to change your scripts if you previously defined the group
@@ -1170,16 +1170,16 @@ Development
 
 -----------
 A new 'strict' option is available in the profiles and by default enabled for
-the initialization phases of Lynis. It will perform a strict code check for the
+the initialization phases of Leenus. It will perform a strict code check for the
 tests, to detect any uninitialized variables, improving code quality.
 
 
 Helpers
 -------
-With 'lynis update check' you can now check for updates. This is the preferred
+With 'leenus update check' you can now check for updates. This is the preferred
 new method.
 
-The command 'lynis show changelog' allows reviewing the changes. Optionally a
+The command 'leenus show changelog' allows reviewing the changes. Optionally a
 release can be specified as additional argument.
 
 
@@ -1232,8 +1232,8 @@ General
 * Added bold and header as new colors
 * Changed header and footer of screen output
 * Allow atomic tests to be skipped (e.g. SSH-7408)
-* Extended tests database with category (lynis show tests)
-* By default Lynis will now run in 'quick mode' and not break after each
+* Extended tests database with category (leenus show tests)
+* By default Leenus will now run in 'quick mode' and not break after each
 section. You can get this behavior by adding the --wait option.
 
 
@@ -1262,7 +1262,7 @@ Several controls on the website are added or updated, including:
 ---------------------------------------------------------------------------------
 
 
-Lynis 2.3.1 (2016-07-14)
+Leenus 2.3.1 (2016-07-14)
 -----------------------------------------------
 
 This is a minor patch to improve upon findings in version 2.3.0.
@@ -1277,16 +1277,16 @@ Changes:
 --------------------------------------------------------------
 
 
-Lynis 2.3.0 (2016-07-13)
+Leenus 2.3.0 (2016-07-13)
 -----------------------------------------------
 
-We are excited to announce this major release of auditing tool Lynis. Several big
-changes have been made to core functions of Lynis. These changes are the next of
+We are excited to announce this major release of auditing tool Leenus. Several big
+changes have been made to core functions of Leenus. These changes are the next of
 simplification improvements we made. There is a risk of breaking your existing
 configuration. See the tips below to upgrade.
 
 This release will soon also be available in our software repository. For more
-details see https://packages.cisofy.com to install and upgrade Lynis.
+details see https://packages.cisofy.com to install and upgrade Leenus.
 
 
 Upgrade tips
@@ -1294,14 +1294,14 @@ Upgrade tips
 
 Default profile and custom profiles:
 Settings of multiple profiles can now be merged. Instead of making changes to
-default.prf, copy your changes to custom.prf. Use 'lynis show profiles' to show
+default.prf, copy your changes to custom.prf. Use 'leenus show profiles' to show
 any detected profiles. Only include your changes in custom.prf, to keep the
 configuration clean and tidy. They will then overwrite the defaults. Use
-'lynis show settings' to see if they are applied.
+'leenus show settings' to see if they are applied.
 
 Check your cron jobs:
 When using --quiet, the output will be really quiet now. Use --show-warnings-only
-if you still want to see the warnings. Lynis will now exit with error 0, even
+if you still want to see the warnings. Leenus will now exit with error 0, even
 when warnings have been found. Use option error-on-warnings=yes (custom.prf) to
 exit with code 78 when it has any warnings.
 
@@ -1311,12 +1311,12 @@ Details
 
 Ansible
 -------
-New Ansible examples for deployment: https://github.com/CISOfy/lynis-ansible
+New Ansible examples for deployment: https://github.com/CISOfy/leenus-ansible
 
 
 Databases
 ---------
-Lynis will check also for DB2 instances and report the status.
+Leenus will check also for DB2 instances and report the status.
 
 
 Developer Mode
@@ -1328,13 +1328,13 @@ details are displayed on screen, to help testing of existing or new tests.
 To get easy access, a new profile has been added (developer.prf).
 
 Examples:
-lynis audit system --profile developer.prf
-lynis audit system --developer
+leenus audit system --profile developer.prf
+leenus audit system --developer
 
-A new software development kit (SDK) for Lynis is available on GitHub. This will
+A new software development kit (SDK) for Leenus is available on GitHub. This will
 help contributors and developers to test software quality, including linting and
 running unit tests. The devkit also supports building DEB and RPM files for easy
-deployment. The repository can be found on https://github.com/CISOfy/lynis-sdk
+deployment. The repository can be found on https://github.com/CISOfy/leenus-sdk
 
 
 Documentation
@@ -1342,10 +1342,10 @@ Documentation
 Template files have been updated to provide better examples on how to create
 custom tests and plugins.
 
-To simplify the usage of Lynis, a new helper utility has been added: show.
+To simplify the usage of Leenus, a new helper utility has been added: show.
 This helper will show help, or values (e.g. version, plugin directories, etc).
-Some examples include: lynis show options, lynis show commands, lynis show
-version, etc. See lynis show for all available details.
+Some examples include: leenus show options, leenus show commands, leenus show
+version, etc. See leenus show for all available details.
 
 
 File Systems
@@ -1357,7 +1357,7 @@ improved. A new test has been added to check if /var/tmp has been bound to /tmp.
 
 Language Support
 ----------------
-Lynis now supports language translations, with the language profile option.
+Leenus now supports language translations, with the language profile option.
 Initial languages: Dutch (nl), English (en), French (fr).
 
 You can help by translating the language files in the db directory.
@@ -1395,7 +1395,7 @@ Priority: 1) argument, 2) profile, 3) default
 
 Profiles
 --------
-Lynis now support multiple profiles. By using a file 'custom.prf', it allows to
+Leenus now support multiple profiles. By using a file 'custom.prf', it allows to
 inherit values first from default.prf, then merge it with custom.prf.
 
 Several tests have been altered to support multiple profiles.
@@ -1408,8 +1408,8 @@ New profile options:
 
 Remote scanning
 ---------------
-Although Lynis is a aimed on running on local hosts, there is still an ongoing
-demand for running remote scans. With 'lynis audit system remote' tips are now
+Although Leenus is a aimed on running on local hosts, there is still an ongoing
+demand for running remote scans. With 'leenus audit system remote' tips are now
 provides to perform such a scan via SSH.
 
 
@@ -1474,12 +1474,12 @@ Program Options
 * --show-warnings-only  - Only show warnings on screen
 * --skip-plugins        - Disable running any plugins (alias: --no-plugins)
 * --quiet               - Changed: become really quiet
-* --config              - Removed: use 'lynis show profiles' instead
+* --config              - Removed: use 'leenus show profiles' instead
 
 
 Functions
 ---------
-* AddSetting            - New function to store settings (lynis show settings)
+* AddSetting            - New function to store settings (leenus show settings)
 * ContainsString        - New function to search for a string in another one
 * Display               - Added --debug, showing details on screen in debug mode
                         - Reset indentation for lines which are too long
@@ -1544,9 +1544,9 @@ Plugins
 
 --------------------------------------------------------------
 
-Lynis 2.2.0 (2016-03-18)
+Leenus 2.2.0 (2016-03-18)
 
-We are proud to present this new release of Lynis. It is a major upgrade, and the
+We are proud to present this new release of Leenus. It is a major upgrade, and the
 result of many months of work. This version includes new features and tests, and
 many small enhancements. We encourage all to test and upgrade to this latest
 release.
@@ -1584,7 +1584,7 @@ of automation tools.
 
 * Authentication
 ----------------
-Depending on the operating system, Lynis now tries to determine if failed logins
+Depending on the operating system, Leenus now tries to determine if failed logins
 are properly logged. This includes checking for /etc/login.defs file [AUTH-9408].
 Merged previous password check for Solaris into test AUTH-9228. User ids on AIX
 will be gathered and added to the report [AUTH-9234].
@@ -1655,7 +1655,7 @@ Detection of firewire is enhanced (both ohci and core detected).
 
 * Logging
 ---------
-Extended the test syslog-ng logging to remote systems. The log Lynis itself
+Extended the test syslog-ng logging to remote systems. The log Leenus itself
 produces is also enhanced, to be more detailed for several tests.
 
 * Malware
@@ -1779,24 +1779,24 @@ permissions for Docker files, like the socket file [CONT-8108].
 - Data uploads: provide help when self-signed certificates are used.
 - Improved output for tests which before showed results as a warning, instead of
   just as a suggestion.
-- Lynis now uses different exit codes, depending on errors or finding warnings.
+- Leenus now uses different exit codes, depending on errors or finding warnings.
   This helps with automation and any custom scripting you want to apply.
-- Preparations to allow compressing the Lynis report file and enhance uploads.
+- Preparations to allow compressing the Leenus report file and enhance uploads.
 - Added --config option to show what settings file or profile is used.
-- Tool tips are displayed, to make Lynis even easier to use.
+- Tool tips are displayed, to make Leenus even easier to use.
 - Show a warning if the release is older than four months.
 - PID file has additional checks, including cleanups.
 
 
 * Plugins
 ---------
-[PAM]       New plugin available in all versions of Lynis
+[PAM]       New plugin available in all versions of Leenus
 [PLGN-2602] Replaced mktemp commands with CreateTempFile function
 [PLGN-2804] Limit report output of EXT file systems to 1 item per line
 
 --------------------------------------------------------------
 
-Lynis 2.1.1 (2015-07-22)
+Leenus 2.1.1 (2015-07-22)
 
 This release adds a lot of improvements, with focus on performance, and
 additional support for common Linux distributions and external utilities.
@@ -1813,7 +1813,7 @@ systems with many files. This also includes code cleanups.
 
 * Automatic updates
 -------------------
-Initial work on an automatic updater has been implemented. This way Lynis
+Initial work on an automatic updater has been implemented. This way Leenus
 can be scheduled for automatic updating from a trusted source.
 
 * Internal functions
@@ -1873,13 +1873,13 @@ Several new tests have been added:
 
 * Documentation
 ---------------
-A new document has been created to help with the process of upgrading Lynis.
-It is available at https://cisofy.com/documentation/lynis/upgrading/
+A new document has been created to help with the process of upgrading Leenus.
+It is available at https://cisofy.com/documentation/leenus/upgrading/
 
 --------------------------------------------------------------
 
 
-Lynis 2.1.0 (2015-04-16)
+Leenus 2.1.0 (2015-04-16)
 
 * General
 ---------
@@ -1907,8 +1907,8 @@ has been extended.
 
 * Documentation
 ---------------
-- New document: Getting started with Lynis
-  https://cisofy.com/documentation/lynis/get-started/
+- New document: Getting started with Leenus
+  https://cisofy.com/documentation/leenus/get-started/
 
 * Plugins (Enterprise)
 ----------------------
@@ -1919,12 +1919,12 @@ New configuration plugins:
 * PLGN-4802 (SSH settings)
 * PLGN-4804 (login.defs)
 
-Download link: https://cisofy.com/download/lynis/
+Download link: https://cisofy.com/download/leenus/
 
 --------------------------------------------------------------
 
 
-Lynis 2.0.0 (2015-02-25)
+Leenus 2.0.0 (2015-02-25)
 
 
 The first release within the 2.x branch! It includes several new features, to
@@ -1935,46 +1935,46 @@ New features and many improvements are the reason for the bump to a major
 release, also a beginning of a new era. Many tools to audit or harden systems
 have being released, yet none have been maintained over a long period of time.
 
-Lynis Support and Feedback
+Leenus Support and Feedback
 --------------------------
 This software is supported and under development by CISOfy. By providing a
 dual license, this software is kept up-to-date and enhanced. Both customers
 and the community, benefit from this licensing. This release is available
 thanks to your input and feedback.
 
-Lynis Helpers
+Leenus Helpers
 -------------
 New in this release is the support for helpers. Small utilities which enhance
-Lynis by providing a single goal. The first helper available is to audit
+Leenus by providing a single goal. The first helper available is to audit
 Docker build files.
 
-Lynis Improved OS support
+Leenus Improved OS support
 -------------------------
 Many changes have been implemented to better support Linux, FreeBSD, NetBSD
 DragonBSD and OpenBSD in particular. Upcoming releases will include smaller
 "improvement rounds" for other systems as well.
 
-Lynis New technologies
+Leenus New technologies
 ----------------------
 More utilities and technologies are supported now. Technologies and tools
 like systemd, Docker, nftables.
 
-Lynis Lynis Enterprise
+Leenus Leenus Enterprise
 ----------------------
 As this code is shared, customers have an additional option to define to
 what server they want to upload the audit results. Also, commercial plugins
 have been bundled.
 
-Lynis New parameters
+Leenus New parameters
 --------------------
 Several new options have been added:
 * --dump-options (see all options)
 * --report-file (define a different location for the report file)
 
-Lynis General
+Leenus General
 -------------
 Documentation on the website has been extended: https://cisofy.com/support/
-The man page, Lynis binary and several tests have improved texts.
+The man page, Leenus binary and several tests have improved texts.
 
 This release is exceptional in that it includes many changes. We have done
 a lot of testing on different platforms. You could expect this software to be
@@ -1988,7 +1988,7 @@ Enjoy this new release!
 
 ================================================================================
 
-Lynis 1.6.4 (2014-11-04)
+Leenus 1.6.4 (2014-11-04)
 
 New:
 - Boot loader detection for AIX [BOOT-5102]
@@ -2012,7 +2012,7 @@ Changes:
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.6.3 (2014-10-14)
+Leenus 1.6.3 (2014-10-14)
 
 New:
 - Added tests for Shellshock bash vulnerability [SHLL-6290]
@@ -2024,7 +2024,7 @@ New:
 - Gentoo vulnerable packages test [PKGS-7393]
 - New test for qdaemon status [PRNT-2418]
 - Gentoo package listing [PKGS-7304]
-- Running Lynis without root permissions will start non-privileged scan
+- Running Leenus without root permissions will start non-privileged scan
 - Systemd service and timer example file added
 - Added grub2-install to binaries
 
@@ -2046,7 +2046,7 @@ Changes:
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.6.2 (2014-09-22)
+Leenus 1.6.2 (2014-09-22)
 
  New:
  - IsVirtualMachine function to check if system is running in VM
@@ -2059,12 +2059,12 @@ Lynis 1.6.2 (2014-09-22)
  - Detection for SaltStack configuration management tooling
  - ShowSymlinkPath function to check path behind a symlink
  - Check of configuration options of pacman [PKGS-7314]
- - Support for drill binary to check for Lynis update
+ - Support for drill binary to check for Leenus update
  - FileIsEmpty function to check for empty files
  - Detect updates for Arch Linux [PKGS-7312]
  - Add detection for machine ID (systemd)
  - Added linux_config_file to report
- - Bash completion script for Lynis
+ - Bash completion script for Leenus
  - Added detection of ss binary
 
  Changes:
@@ -2083,7 +2083,7 @@ Lynis 1.6.2 (2014-09-22)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.6.1 (2014-09-09)
+Leenus 1.6.1 (2014-09-09)
 
  New:
  - Added --pentest parameter to run a non-privileged scans (e.g. for pentesting)
@@ -2094,7 +2094,7 @@ Lynis 1.6.1 (2014-09-09)
  - Don't show warnings for 'swap' in 4th column fstab file [FILE-6336]
  - Remove warning for old files in /tmp [FILE-6354]
  - CheckUpdates function will have better output when no connection is available
- - Changes to parameters and functions, to allow penetration tests with Lynis
+ - Changes to parameters and functions, to allow penetration tests with Leenus
  - Test for actual files in /etc/modprobe.d before grepping in it
  - Improved chown command when file permissions are incorrect
  - Changed output of update test, show when status is unknown
@@ -2105,7 +2105,7 @@ Lynis 1.6.1 (2014-09-09)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.6.0 (2014-08-27)
+Leenus 1.6.0 (2014-08-27)
 
  New:
  - Added several new plugins to default profile
@@ -2120,7 +2120,7 @@ Lynis 1.6.0 (2014-08-27)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.5.9 (2014-07-31)
+Leenus 1.5.9 (2014-07-31)
 
  New:
  - New NetBSD test for vulnerable software packages [PKGS-7380]
@@ -2161,7 +2161,7 @@ Lynis 1.5.9 (2014-07-31)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.5.8 (2014-07-24)
+Leenus 1.5.8 (2014-07-24)
 
  New:
  - Testing for commercial anti-virus solutions like McAfee and Sophos [MALW-3280]
@@ -2177,7 +2177,7 @@ Lynis 1.5.8 (2014-07-24)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.5.7 (2014-07-09)
+Leenus 1.5.7 (2014-07-09)
 
  New:
  - Implementation of SafePerms function
@@ -2188,7 +2188,7 @@ Lynis 1.5.7 (2014-07-09)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.5.6 (2014-06-12)
+Leenus 1.5.6 (2014-06-12)
 
  New:
  - Test for PHP binary and PHP version
@@ -2206,7 +2206,7 @@ Lynis 1.5.6 (2014-06-12)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.5.5 (2014-06-08)
+Leenus 1.5.5 (2014-06-08)
 
  New:
  - Check for nginx access logging [HTTP-6712]
@@ -2224,11 +2224,11 @@ Lynis 1.5.5 (2014-06-08)
  This releases solves two issues regarding the usage of temporary
  files (predictability of the file names). You are advised to upgrade
  to this version as soon as possible. For more information see the
- our blog post: http://linux-audit.com/lynis-security-notice-154-and-older/
+ our blog post: http://linux-audit.com/leenus-security-notice-154-and-older/
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.5.4 (2014-06-04)
+Leenus 1.5.4 (2014-06-04)
 
  New:
  - Check additional configuration files for nginx [HTTP-6706]
@@ -2241,7 +2241,7 @@ Lynis 1.5.4 (2014-06-04)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.5.3 (2014-05-19)
+Leenus 1.5.3 (2014-05-19)
 
  New:
  - Support for zypper package manager
@@ -2256,7 +2256,7 @@ Lynis 1.5.3 (2014-05-19)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.5.2 (2014-05-05)
+Leenus 1.5.2 (2014-05-05)
 
  New:
  - Support for runlevel in binaries test
@@ -2275,7 +2275,7 @@ Lynis 1.5.2 (2014-05-05)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.5.1 (2014-04-22)
+Leenus 1.5.1 (2014-04-22)
 
  Changes:
  - Extended reporting with running databases and frameworks
@@ -2286,7 +2286,7 @@ Lynis 1.5.1 (2014-04-22)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.5.0 (2014-04-10)
+Leenus 1.5.0 (2014-04-10)
 
  New:
  - Support for Amazon Linux
@@ -2301,7 +2301,7 @@ Lynis 1.5.0 (2014-04-10)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.4.9 (2014-04-03)
+Leenus 1.4.9 (2014-04-03)
 
  New:
  - Added links in report to related control documentation on website
@@ -2313,7 +2313,7 @@ Lynis 1.4.9 (2014-04-03)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.4.8 (2014-03-27)
+Leenus 1.4.8 (2014-03-27)
 
  Changes:
  - Adjusted resolv.conf domain setting in report [NAME-4016]
@@ -2325,7 +2325,7 @@ Lynis 1.4.8 (2014-03-27)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.4.7 (2014-03-21)
+Leenus 1.4.7 (2014-03-21)
 
  New:
  - New configuration item to set group name
@@ -2340,7 +2340,7 @@ Lynis 1.4.7 (2014-03-21)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.4.6 (2014-03-14)
+Leenus 1.4.6 (2014-03-14)
 
  New:
  - Check for GPG signing in yum.conf [PKGS-7387]
@@ -2351,7 +2351,7 @@ Lynis 1.4.6 (2014-03-14)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.4.5 (2014-03-08)
+Leenus 1.4.5 (2014-03-08)
 
  New:
  - Support for Chakra Linux
@@ -2370,7 +2370,7 @@ Lynis 1.4.5 (2014-03-08)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.4.4 (2014-03-03)
+Leenus 1.4.4 (2014-03-03)
 
  New:
  - Detect tune2fs binary
@@ -2393,11 +2393,11 @@ Lynis 1.4.4 (2014-03-03)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.4.3 (2014-02-23)
+Leenus 1.4.3 (2014-02-23)
 
  New:
  - Support for ClearOS
- - Data upload for Lynis Enterprise users (--upload)
+ - Data upload for Leenus Enterprise users (--upload)
  - Added debug variable for troubleshooting purposes
  - Scan profile option license_key
 
@@ -2410,7 +2410,7 @@ Lynis 1.4.3 (2014-02-23)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.4.2 (2014-02-19)
+Leenus 1.4.2 (2014-02-19)
 
  Changes:
  - Ignore interfaces aliases for HostID
@@ -2419,7 +2419,7 @@ Lynis 1.4.2 (2014-02-19)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.4.1 (2014-02-15)
+Leenus 1.4.1 (2014-02-15)
 
  New:
  --plugin-dir parameter
@@ -2436,7 +2436,7 @@ Lynis 1.4.1 (2014-02-15)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.4.0 (2014-01-29)
+Leenus 1.4.0 (2014-01-29)
 
  Changes:
  - Removed some warnings, to prevent double messages
@@ -2452,7 +2452,7 @@ Lynis 1.4.0 (2014-01-29)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.3.9 (2014-01-09)
+Leenus 1.3.9 (2014-01-09)
 
  Changes:
  - Additional support for Mac OS
@@ -2466,7 +2466,7 @@ Lynis 1.3.9 (2014-01-09)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.3.8 (2013-12-25)
+Leenus 1.3.8 (2013-12-25)
 
  New:
  - New parameter --view-categories to display available test categories
@@ -2501,7 +2501,7 @@ Lynis 1.3.8 (2013-12-25)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.3.7 (2013-12-10)
+Leenus 1.3.7 (2013-12-10)
 
  New:
  - Function FileExists() and SearchItem()
@@ -2513,7 +2513,7 @@ Lynis 1.3.7 (2013-12-10)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.3.6 (2013-12-03)
+Leenus 1.3.6 (2013-12-03)
 
  New:
  - Support for the dntpd time daemon
@@ -2569,7 +2569,7 @@ Lynis 1.3.6 (2013-12-03)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.3.5 (2013-11-19)
+Leenus 1.3.5 (2013-11-19)
 
  New:
  - OS detection for Mageia Linux, PCLinuxOS, Sabayon Linux and Scientific Linux
@@ -2602,7 +2602,7 @@ Lynis 1.3.5 (2013-11-19)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.3.4 (2013-11-08)
+Leenus 1.3.4 (2013-11-08)
 
  New:
  - OS detection support for Arch Linux
@@ -2619,7 +2619,7 @@ Lynis 1.3.4 (2013-11-08)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.3.3 (2013-10-24)
+Leenus 1.3.3 (2013-10-24)
 
  New:
  - Added NTP configuration type to report [TIME-3104]
@@ -2631,7 +2631,7 @@ Lynis 1.3.3 (2013-10-24)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.3.2 (2013-10-09)
+Leenus 1.3.2 (2013-10-09)
 
  New:
  - Test for PowerDNS authoritative servers (master/slave status) [NAME-4238]
@@ -2649,7 +2649,7 @@ Lynis 1.3.2 (2013-10-09)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.3.1 (2013-10-02)
+Leenus 1.3.1 (2013-10-02)
 
  Changes:
  - Updated generic references in files
@@ -2663,7 +2663,7 @@ Lynis 1.3.1 (2013-10-02)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.3.0 (2011-12-25)
+Leenus 1.3.0 (2011-12-25)
 
  New:
  - Profile option: ignore_home_dir
@@ -2688,7 +2688,7 @@ Lynis 1.3.0 (2011-12-25)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.2.9 (2009-12-15)
+Leenus 1.2.9 (2009-12-15)
 
  New:
  - Support for Squid3
@@ -2708,7 +2708,7 @@ Lynis 1.2.9 (2009-12-15)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.2.8 (2009-12-08)
+Leenus 1.2.8 (2009-12-08)
 
  New:
  - Squid support added
@@ -2745,7 +2745,7 @@ Lynis 1.2.8 (2009-12-08)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.2.7 (2009-11-01)
+Leenus 1.2.7 (2009-11-01)
 
  New:
  - Added Kernel Hardening section
@@ -2802,7 +2802,7 @@ Lynis 1.2.7 (2009-11-01)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.2.6 (2009-04-05)
+Leenus 1.2.6 (2009-04-05)
 
  New:
  - Sudoers file permissions check [AUTH-9252]
@@ -2830,7 +2830,7 @@ Lynis 1.2.6 (2009-04-05)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.2.5 (2009-03-27)
+Leenus 1.2.5 (2009-03-27)
 
  New:
  - slapd.conf check [LDAP-2224]
@@ -2903,7 +2903,7 @@ Lynis 1.2.5 (2009-03-27)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.2.4 (2009-03-17)
+Leenus 1.2.4 (2009-03-17)
 
  New:
  - NTP daemon process test [TIME-3108]
@@ -2964,7 +2964,7 @@ Lynis 1.2.4 (2009-03-17)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.2.3 (2009-03-02)
+Leenus 1.2.3 (2009-03-02)
 
  New:
  - Added syslog-NG daemon check [LOGG-2132]
@@ -3011,7 +3011,7 @@ Lynis 1.2.3 (2009-03-02)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.2.2 (2009-02-15)
+Leenus 1.2.2 (2009-02-15)
 
  New:
  - Support for MySQL client
@@ -3019,7 +3019,7 @@ Lynis 1.2.2 (2009-02-15)
  - New test: SSH daemon status test [SSH-7402]
  - New test: sysstat account information [ACCT-9626]
  - New test: connections in WAIT state [NETW-3028]
- - Lynis displays a warning now, if current version is really outdated
+ - Leenus displays a warning now, if current version is really outdated
  - New parameter option (log_tests_incorrect_os) to minimize logging
 
  Changes:
@@ -3039,7 +3039,7 @@ Lynis 1.2.2 (2009-02-15)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.2.1 (2008-09-05)
+Leenus 1.2.1 (2008-09-05)
 
  New:
  - Added support for Samba
@@ -3069,7 +3069,7 @@ Lynis 1.2.1 (2008-09-05)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.2.0 (2008-08-26)
+Leenus 1.2.0 (2008-08-26)
 
  New:
  - New test: Passwordless Solaris accounts test [AUTH-9254]
@@ -3094,7 +3094,7 @@ Lynis 1.2.0 (2008-08-26)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.1.9 (2008-08-09)
+Leenus 1.1.9 (2008-08-09)
 
  New:
  - New test: AppArmor framework check [MACF-6204]
@@ -3123,7 +3123,7 @@ Lynis 1.1.9 (2008-08-09)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.1.8 (2008-07-16)
+Leenus 1.1.8 (2008-07-16)
 
  New:
  - Mac OS X support extended and new options added
@@ -3148,7 +3148,7 @@ Lynis 1.1.8 (2008-07-16)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.1.7 (2008-06-28)
+Leenus 1.1.7 (2008-06-28)
 
  New:
  - New test: check for unused iptables rules [FIRE-4513]
@@ -3180,7 +3180,7 @@ Lynis 1.1.7 (2008-06-28)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.1.6 (2008-06-19)
+Leenus 1.1.6 (2008-06-19)
 
  New:
  - New test: Check writable startup scripts [BOOT-5184]
@@ -3222,7 +3222,7 @@ Lynis 1.1.6 (2008-06-19)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.1.5 (2008-06-10)
+Leenus 1.1.5 (2008-06-10)
 
  New:
  - Assigned ID to Apache configuration file test [HTTP-6624]
@@ -3250,10 +3250,10 @@ Lynis 1.1.5 (2008-06-10)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.1.4 (2008-05-31)
+Leenus 1.1.4 (2008-05-31)
 
  New:
- - Added option to disable Lynis upgrade availability test (profile option)
+ - Added option to disable Leenus upgrade availability test (profile option)
  - Added new option --check-update, to display (update) information
  - Added stub for malware and file permissions database
  - New section 'LDAP Services'
@@ -3271,14 +3271,14 @@ Lynis 1.1.4 (2008-05-31)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.1.3 (2008-05-21)
+Leenus 1.1.3 (2008-05-21)
 
  New:
  - Added security updates check for Fedora, RHEL 5.x, CentOS 5.x
  - Added Linux kernel version check
  - Most stable tests have an unique ID now
  - Skipped tests have their reason to skip logged
- - Added /etc/lynis/plugins to searchable plugin directory targets
+ - Added /etc/leenus/plugins to searchable plugin directory targets
  - Added Register() function, to handle tests, prerequisites and counter
  - Added new crypto tests
  - Added profile option "test_skip_always" to blacklist a specific test
@@ -3299,7 +3299,7 @@ Lynis 1.1.3 (2008-05-21)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.1.2 (2008-05-11)
+Leenus 1.1.2 (2008-05-11)
 
  New:
  - Added memory test for Solaris (tested on OpenSolaris)
@@ -3318,14 +3318,14 @@ Lynis 1.1.2 (2008-05-11)
 
  ** Special release notes [package/ports]: **
  - Added several default paths to check for usable INCLUDE directory. This
-   should make packaging Lynis easier for downstream package providers.
- - When no profile is set, Lynis will check first /etc/lynis/default.prf,
+   should make packaging Leenus easier for downstream package providers.
+ - When no profile is set, Leenus will check first /etc/leenus/default.prf,
    before setting default.prf (in current work directory) as profile to use.
  - New directory added to be installed for future versions: plugins
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.1.1 (2008-04-13)
+Leenus 1.1.1 (2008-04-13)
 
  New:
  - Added Solaris package manager (pkginfo) to obtain installed packages
@@ -3349,7 +3349,7 @@ Lynis 1.1.1 (2008-04-13)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.1.0 (2008-04-09)
+Leenus 1.1.0 (2008-04-09)
 
  New:
  - Added test: default gateway (Linux/BSD)
@@ -3364,7 +3364,7 @@ Lynis 1.1.0 (2008-04-09)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.0.9 (2008-03-24)
+Leenus 1.0.9 (2008-03-24)
 
  New:
  - Added --quiet option (currently not 100% quiet yet)
@@ -3380,7 +3380,7 @@ Lynis 1.0.9 (2008-03-24)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.0.8 (2008-02-10)
+Leenus 1.0.8 (2008-02-10)
 
  New:
  - Added pf filter rule test
@@ -3400,7 +3400,7 @@ Lynis 1.0.8 (2008-02-10)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.0.7 (2008-01-28)
+Leenus 1.0.7 (2008-01-28)
 
  New:
  - Test: UFS mount point check (FreeBSD)
@@ -3423,7 +3423,7 @@ Lynis 1.0.7 (2008-01-28)
    users. Also regrouped parts of text and cleaned useless white spaces.
  - General program output improved (spaces, indentation)
  - Logging extended
- - Updated lynis.spec file (contrib)
+ - Updated leenus.spec file (contrib)
  - FAQ and README files extended and updated
 
  Bugfixes:
@@ -3438,11 +3438,11 @@ Lynis 1.0.7 (2008-01-28)
  - Added function RemovePIDFile before some exit routines, to clean up PID file
  - Extracted profile support, parameter support to separated files
  - Created file tests_ports_packages for Ports and Packages
- - Deleted lynis.spec file, since it was not working and will be rewritten later
+ - Deleted leenus.spec file, since it was not working and will be rewritten later
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.0.6 (2007-12-26)
+Leenus 1.0.6 (2007-12-26)
 
  New:
  - Added Solaris real users test
@@ -3457,14 +3457,14 @@ Lynis 1.0.6 (2007-12-26)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.0.5 (2007-12-02)
+Leenus 1.0.5 (2007-12-02)
 
  New:
  - Test: unique group names
  - Test: unique group IDs
  - Added check for rpm, chkrootkit and rkhunter binary
  - Added function to cleanup at manual interrupt (INT)
- - Support added to run Lynis as cronjob (--cronjob)
+ - Support added to run Leenus as cronjob (--cronjob)
  - Fedora support added
  - Added umask 027, to tighten up file permissions
 
@@ -3490,7 +3490,7 @@ Lynis 1.0.5 (2007-12-02)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.0.4 (2007-11-27)
+Leenus 1.0.4 (2007-11-27)
 
  New:
  - Test: query real system users (FreeBSD/Linux)
@@ -3507,7 +3507,7 @@ Lynis 1.0.4 (2007-11-27)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.0.3 (2007-11-19)
+Leenus 1.0.3 (2007-11-19)
 
  New:
  - Added check for sockstat
@@ -3529,7 +3529,7 @@ Lynis 1.0.3 (2007-11-19)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.0.2 (2007-11-15)
+Leenus 1.0.2 (2007-11-15)
 
  New:
  - Test: Added check for NTP daemon or client
@@ -3543,11 +3543,11 @@ Lynis 1.0.2 (2007-11-15)
  - Cleaned up source code and fixed some bad typos
  - Added much more delimiter lines to logfile
  - Added version numbers to logfile for used binaries/tools
- - Updated list of parameters within Lynis help
+ - Updated list of parameters within Leenus help
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.0.1 (2007-11-12)
+Leenus 1.0.1 (2007-11-12)
 
  New:
  - Test: check Exim configuration file location
@@ -3568,7 +3568,7 @@ Lynis 1.0.1 (2007-11-12)
 
 ---------------------------------------------------------------------------------
 
-Lynis 1.0.0 (2007-11-08)
+Leenus 1.0.0 (2007-11-08)
 
  New:
  - Support for CentOS (Tested: 5 Final)
@@ -3600,10 +3600,10 @@ Lynis 1.0.0 (2007-11-08)
  - Support for profiles/templates
  - Report file creation (for reporting/monitoring)
  - Extended logfile creation (with system suggestions)
- - Added lynis.spec file for RPM creation
+ - Added leenus.spec file for RPM creation
  - Created project page at website
  - Added documentation (README), ToDo list (TODO)
- - Man page lynis(8)
+ - Man page leenus(8)
 
  Changes:
  - No changes
@@ -3613,4 +3613,4 @@ Lynis 1.0.0 (2007-11-08)
 
 
 ==========================================================================================
-  Lynis - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
+  Leenus - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
