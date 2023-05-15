@@ -1,10 +1,10 @@
-# bash completion for lynis
+# bash completion for leenus
 
 # version 1.0.1 (2019-07-13)
 # Michael Boelen <michael.boelen@cisofy.com>
 
-# lynis(8) completion
-_lynis()
+# leenus(8) completion
+_leenus()
 {
     local cur prev
     # opts nodig nosig
@@ -40,7 +40,7 @@ _lynis()
             COMPREPLY=( $( compgen -W 'categories changelog commands dbdir details environment eol groups help hostids includedir language license logfile man options os pidfile plugindir profiles release releasedate report settings tests  version workdir ' -- "$cur" ) )
             ;;
 
-        # Related items to show (lynis show XYZ)
+        # Related items to show (leenus show XYZ)
         categories)
             return 0
             ;;
@@ -55,10 +55,10 @@ _lynis()
             ;;
         details)
             local dbfile=""
-            local dirs="/data/development/lynis /usr/local/lynis /usr/share/lynis"
+            local dirs="/data/development/leenus /usr/local/leenus /usr/share/leenus"
             for d in ${dirs}; do
                 if [ -f "${d}/db/tests.db" ]; then
-                    local dbfile="/data/development/lynis/db/tests.db"
+                    local dbfile="/data/development/leenus/db/tests.db"
                 fi
             done
             if [ -f "${dbfile}" ]; then
@@ -186,7 +186,7 @@ _lynis()
     return 0
 }
 
-complete -F _lynis lynis
+complete -F _leenus leenus
 
 # Local variables:
 # mode: shell-script
