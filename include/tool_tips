@@ -1,8 +1,8 @@
 #!/bin/sh
-
+#aditya
 #################################################################################
 #
-#   Lynis
+#   Leenus
 # ------------------
 #
 # Copyright 2007-2013, Michael Boelen
@@ -10,9 +10,9 @@
 #
 # Website  : https://cisofy.com
 # Blog     : http://linux-audit.com
-# GitHub   : https://github.com/CISOfy/lynis
+# GitHub   : https://github.com/CISOfy/leenus
 #
-# Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+# Leenus comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
 # welcome to redistribute it under the terms of the GNU General Public License.
 # See LICENSE file for usage of this software.
 #
@@ -30,7 +30,7 @@
         # * Regular security auditing
         #
         # If package is installed, then suggest users to schedule the audit daily
-        # How: confirm presence of directory /etc/lynis and check cronjobs
+        # How: confirm presence of directory /etc/leenus and check cronjobs
 
 
         # * Check for duplicate items between default and custom profile
@@ -51,8 +51,8 @@
         #if [ -n "${ETC_PATHS}" ]; then
         #    for I in ${ETC_PATHS}; do
         #        if [ -d ${I}/bash_completion.d ]; then
-        #            if [ ! -f ${ETC_PATHS}/bash_completion.d/lynis ]; then
-        #                Display "This system has a bash_completion directory. Copy extras/bash_completion.d/lynis to ${I} to get completion support for Lynis"
+        #            if [ ! -f ${ETC_PATHS}/bash_completion.d/leenus ]; then
+        #                Display "This system has a bash_completion directory. Copy extras/bash_completion.d/leenus to ${I} to get completion support for Leenus"
         #            fi
         #        fi
         #    done
@@ -66,4 +66,4 @@
 
 #
 #================================================================================
-# Lynis - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
+# Leenus - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
