@@ -11,7 +11,7 @@ A clear and concise description of what the problem is. How would it help you to
 A clear and concise description of what you want to happen.
 
 **Required changes**
-What needs to be changed in Lynis?
+What needs to be changed in Leenus?
 
 **Additional context**
 Add anything else that you consider to be relevant about the feature request here.
