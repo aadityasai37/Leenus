@@ -1,8 +1,8 @@
 #!/bin/sh
-
+#aditya
 #################################################################################
 #
-#   Lynis
+#   Leenus
 # ------------------
 #
 # Copyright 2007-2013, Michael Boelen
@@ -10,9 +10,9 @@
 #
 # Website  : https://cisofy.com
 # Blog     : http://linux-audit.com
-# GitHub   : https://github.com/CISOfy/lynis
+# GitHub   : https://github.com/CISOfy/leenus
 #
-# Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+# Leenus comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
 # welcome to redistribute it under the terms of the GNU General Public License.
 # See LICENSE file for usage of this software.
 #
@@ -83,7 +83,7 @@
 
             case ${OPTION} in
 
-                # Is Lynis Enterprise allowed to purge this system when it is becomes outdated?
+                # Is Leenus Enterprise allowed to purge this system when it is becomes outdated?
                 allow-auto-purge)
                     FIND=$(echo "${VALUE}" | grep -E "^(1|true|yes)$")
                     if [ -n "${FIND}" ]; then
@@ -205,7 +205,7 @@
                     OPTION_FREEBSD_SKIP_PORTAUDIT="${VALUE}"
                 ;;
 
-                # Lynis Enterprise: group name - deprecated option
+                # Leenus Enterprise: group name - deprecated option
                 group)
                     GROUP_NAME="${VALUE}"
                     AddSetting "group" "${GROUP_NAME}" "Group"
@@ -236,7 +236,7 @@
                     AddSetting "language" "${LANGUAGE}" "Language"
                 ;;
 
-                # Lynis Enterprise license key
+                # Leenus Enterprise license key
                 license-key | license_key)
                     if [ -n "${VALUE}" ]; then
                         LICENSE_KEY="${VALUE}"
@@ -558,4 +558,4 @@
 
 
 #================================================================================
-# Lynis - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
+# Leenus - Security Auditing and System Hardening for Linux and UNIX - https://cisofy.com
