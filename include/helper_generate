@@ -1,8 +1,8 @@
 #!/bin/sh
-
+#aditya
 #################################################################################
 #
-#   Lynis
+#   Leenus
 # ------------------
 #
 # Copyright 2007-2013, Michael Boelen
@@ -10,9 +10,9 @@
 #
 # Website  : https://cisofy.com
 # Blog     : http://linux-audit.com
-# GitHub   : https://github.com/CISOfy/lynis
+# GitHub   : https://github.com/CISOfy/leenus
 #
-# Lynis comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+# Leenus comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
 # welcome to redistribute it under the terms of the GNU General Public License.
 # See LICENSE file for usage of this software.
 #
@@ -24,7 +24,7 @@
 #
 # How to use:
 # ------------
-# Run: lynis generate <option>
+# Run: leenus generate <option>
 #
 ######################################################################
 
@@ -63,7 +63,7 @@ if [ $# -gt 0 ]; then
             ${ECHOCMD} "- hostid2: ${HOSTID2}"
 
             if [ ${SAVEFILE} -eq 1 ]; then
-                FILE="${ROOTDIR}etc/lynis/hostids"
+                FILE="${ROOTDIR}etc/leenus/hostids"
                 if [ -f ${FILE} ]; then
                     ${ECHOCMD} "Error: hostids file already exists (${FILE})"
                     ${ECHOCMD} "Remove the file first and rerun command"
@@ -72,7 +72,7 @@ if [ $# -gt 0 ]; then
                     OUTPUT=$(touch ${FILE} 2> /dev/null)
                     if [ $? -eq 0 ]; then
                         ${ECHOCMD} "Created hostids file (${FILE})"
-                        echo "# generated using 'lynis generate hostids --save'" > ${FILE}
+                        echo "# generated using 'leenus generate hostids --save'" > ${FILE}
                         echo "hostid=${HOSTID}" >> ${FILE}
                         echo "hostid2=${HOSTID2}" >> ${FILE}
                     else
@@ -92,16 +92,16 @@ if [ $# -gt 0 ]; then
 
             ${ECHOCMD} ""
 
-            ${ECHOCMD} "${BG_BLUE}Step 1: create service unit (/etc/systemd/system/lynis.service)${NORMAL}"
+            ${ECHOCMD} "${BG_BLUE}Step 1: create service unit (/etc/systemd/system/leenus.service)${NORMAL}"
 
             ${ECHOCMD} ""
             ${ECHOCMD} "#################################################################################"
             ${ECHOCMD} "#"
-            ${ECHOCMD} "# Lynis service file for systemd"
+            ${ECHOCMD} "# Leenus service file for systemd"
             ${ECHOCMD} "#"
             ${ECHOCMD} "#################################################################################"
-            ${ECHOCMD} "# Do not remove, so Lynis can provide a hint when a newer unit is available"
-            ${ECHOCMD} "# Generator=lynis"
+            ${ECHOCMD} "# Do not remove, so Leenus can provide a hint when a newer unit is available"
+            ${ECHOCMD} "# Generator=leenus"
             ${ECHOCMD} "# Version=1"
             ${ECHOCMD} "#################################################################################"
             ${ECHOCMD} ""
@@ -114,12 +114,12 @@ if [ $# -gt 0 ]; then
             ${ECHOCMD} "IOSchedulingClass=best-effort"
             ${ECHOCMD} "IOSchedulingPriority=7"
             ${ECHOCMD} "Type=simple"
-            MYBINARY=$(which lynis 2>/dev/null)
+            MYBINARY=$(which leenus 2>/dev/null)
             MOREOPTIONS=""
             if [ -n "${LICENSE_KEY}" ]; then
                 MOREOPTIONS=" --upload"
             fi
-            ${ECHOCMD} "ExecStart=${MYBINARY:-/path/to/lynis} audit system --cronjob${MOREOPTIONS}"
+            ${ECHOCMD} "ExecStart=${MYBINARY:-/path/to/leenus} audit system --cronjob${MOREOPTIONS}"
             ${ECHOCMD} ""
             ${ECHOCMD} "[Install]"
             ${ECHOCMD} "WantedBy=multi-user.target"
@@ -128,21 +128,21 @@ if [ $# -gt 0 ]; then
             ${ECHOCMD} ""
             ${ECHOCMD} ""
 
-            ${ECHOCMD} "${BG_BLUE}Step 2: create timer unit (/etc/systemd/system/lynis.timer)${NORMAL}"
+            ${ECHOCMD} "${BG_BLUE}Step 2: create timer unit (/etc/systemd/system/leenus.timer)${NORMAL}"
             ${ECHOCMD} ""
 
             ${ECHOCMD} "#################################################################################"
             ${ECHOCMD} "#"
-            ${ECHOCMD} "# Lynis timer file for systemd"
+            ${ECHOCMD} "# Leenus timer file for systemd"
             ${ECHOCMD} "#"
             ${ECHOCMD} "#################################################################################"
-            ${ECHOCMD} "# Do not remove, so Lynis can provide a hint when a newer unit is available"
-            ${ECHOCMD} "# Generator=lynis"
+            ${ECHOCMD} "# Do not remove, so Leenus can provide a hint when a newer unit is available"
+            ${ECHOCMD} "# Generator=leenus"
             ${ECHOCMD} "# Version=1"
             ${ECHOCMD} "#################################################################################"
             ${ECHOCMD} ""
             ${ECHOCMD} "[Unit]"
-            ${ECHOCMD} "Description=Daily timer for the Lynis security audit and vulnerability scanner"
+            ${ECHOCMD} "Description=Daily timer for the Leenus security audit and vulnerability scanner"
             ${ECHOCMD} ""
             ${ECHOCMD} "[Timer]"
             ${ECHOCMD} "OnCalendar=daily"
@@ -161,12 +161,12 @@ if [ $# -gt 0 ]; then
             ${ECHOCMD} ""
             ${ECHOCMD} "Tell systemd you made changes: systemctl daemon-reload"
             ${ECHOCMD} ""
-            ${ECHOCMD} "Enable and start the timer (so no reboot is needed): systemctl enable --now lynis.timer"
+            ${ECHOCMD} "Enable and start the timer (so no reboot is needed): systemctl enable --now leenus.timer"
             ${ECHOCMD} ""
             ${ECHOCMD} ""
             ${ECHOCMD} "${BG_BLUE}Optional - Customize${NORMAL}"
             ${ECHOCMD} ""
-            ${ECHOCMD} "Want to override the timer? Run: systemctl edit lynis.timer"
+            ${ECHOCMD} "Want to override the timer? Run: systemctl edit leenus.timer"
             ${ECHOCMD} "Note: set the timer by first resetting it, then set the preferred value"
             ${ECHOCMD} ""
             ${ECHOCMD} "[Timer]"
@@ -174,12 +174,12 @@ if [ $# -gt 0 ]; then
             ${ECHOCMD} "OnCalendar=*-*-* 03:00:00"
             ${ECHOCMD} ""
             ;;
-        *)                      ${ECHOCMD} "Unknown argument '${RED}$1${NORMAL}' for lynis generate" ;;
+        *)                      ${ECHOCMD} "Unknown argument '${RED}$1${NORMAL}' for leenus generate" ;;
     esac
 else
     ${ECHOCMD} "\n  ${WHITE}Provide an additional argument${NORMAL}\n\n"
     for ITEM in ${GENERATE_ARGS}; do
-        ${ECHOCMD} "    lynis generate ${BROWN}${ITEM}${NORMAL}"
+        ${ECHOCMD} "    leenus generate ${BROWN}${ITEM}${NORMAL}"
     done
     ${ECHOCMD} "\n"
     ${ECHOCMD} ""
